@@ -1,0 +1,37 @@
+Structs are very similar to classes, but they are counted as value types 
+unlike classes which are reference types.
+This is they're main selling point.
+
+Because they are counted as value types, structs are best used to form collections
+of important values to be used in defining a simple data strucure WITHOUT any 
+complex behaviors. 
+HOW TO USE:
+
+*NOTE FOR CONSTRUCTORS OF STRUCTS
+Keep in mind you cannot create your own parameterless constructor 
+and cannot benefit from inheritance. 
+One parameterless constructor is supplied automatically and cannot
+be changed. 
+
+You CAN provide a constructor WITH parameters, and this is best used to 
+initialize all the values that the struct will house. 
+Providing a constructor to initialize the variables of a struct is in fact
+the ONLY way to initialize the variables of a struct. (field or property
+initializers are a no go).
+ 
+You make them the same way you make a class, where the class keyword is 
+replaced with the struct keyword.
+
+public struct Vector2D{
+  int x;
+  int y;
+
+  public Vector2D(int x, int y){
+    this.x = x;
+    this.y = y;
+  }
+
+}
+
+
+

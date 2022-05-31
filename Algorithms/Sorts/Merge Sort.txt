@@ -1,0 +1,8 @@
+Best Case: O(N logn) Worst Case: O(N logn)
+
+Useful for that time complexity but suffers from requiring double the space.
+
+Divide and Conquer,
+Keep dividing the array in half till you have single elements.
+Then start putting each part back together, and "on the way up"
+you do the comparison to make the list sorted.

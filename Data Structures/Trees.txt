@@ -1,0 +1,23 @@
+Analogy: Think of it like a tree where you start from the root and you branch out. 
+The rule of thumb is that each child can only have 1 parent. If the node has no 
+parent, then it is the root node.
+
+Binary Trees are more specific trees, but also seems more useful. 
+
+Binary Trees have the requirements that each parent nodes must have either 2
+children (left node and right node) or none. 
+Each left node must be less in value than the parent, and each right node
+must be more in value than the parent.
+The Tree also needs to be "complete" to be a Binary Tree. 
+A Binary Tree is complete if the leaf nodes fill all the way up relative to 
+the LEFT side.
+
+Binary Trees are a nice way to organize data and be able to retrieve said data in 
+Big O(log(n)). It is log(n) because at every level of the tree you decrease
+the search scope by half. At each node you ask "is my value smaller or greater"
+than the value found in this node? Then you choose the right or left path that gets
+you closer to your value. Each time is half a chunk taken off the tree.
+
+This is true as long as the tree is "balanced".
+A tree is balanced if the left and right subtree does not have a difference 
+in height that is more than 1.()

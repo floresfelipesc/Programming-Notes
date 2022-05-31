@@ -1,0 +1,36 @@
+(Peek, Enqueue, Dequeue)
+All these operations have a performance of O(1)
+
+FIRST IN FIRST OUT (FIFO)
+
+To traverse a queue, the temp pointers keep track of the front of the queue
+and the back of the queue. Because of this you may want to call these pointers
+as front and back respectively. 
+
+WHEN TO USE: The key to know is if the ORDER of data is important.
+Whenever you want to pay special priority to a thing that has occured
+LATEST IN THE PAST, use a queue. This is like taking care of the customer 
+that arrived first. Or...other things that I cannot think of. 
+
+If you have a scenario where you do not care about the ORDER in which data comes in,
+then look elsewhere.
+
+EX: 
+public class Queue{
+  Node front;
+  Node back; 
+
+  public Queue{
+    front = null;
+    back = null;
+  }
+
+  public void Enqueue(int d){
+    //....
+  }
+
+  public void Dequeue(){
+    //....
+  }
+
+}

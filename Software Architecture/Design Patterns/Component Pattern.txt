@@ -1,0 +1,76 @@
+This is also known as strategy pattern. 
+You can truly pick and choose which components you want to add to a body by using 
+interfaces to generalize the type of component it is. 
+
+Then upon creating an instance of the body, you can specify which type of component
+it will carry through polymorphism. 
+
+Meanwhile the components all implement from the common Interfaces so that 
+polymorphism can take place. Each more specific component can then define themselves.
+
+This allows for instances of the same class to be able to vary wildly from each other
+depending on how you instantiate it.
+
+LESSON: Interfaces and Polymorphism are awesome, and should be favored more than 
+inheritance.
+
+ex: public class Player{
+    IInput in;
+    IPhysics phy;
+    IAnimation anim;
+
+    public Player(IInput in, IPhysics phy, IAnimation anim){
+      this.in = in;
+      this.phy = phy;
+      this.anim = anim;
+    }
+}
+
+public class Main{
+  Player pl = new Player(new ControllerInput(), 
+                         new LowGravPhysics(),
+                         new SlowAnimation());
+
+
+}
+////////////////////////////////////////////////////////////////
+public interface IInput{
+  public void getInput();
+}
+
+public class ControllerInput:IInput{
+
+  public ControllerInput(){
+    //initialize
+  }
+
+  public void getInput(){
+    //implement
+  }
+
+}
+
+public class KeyboardInput:IInput{
+
+  public KeyboardInput(){
+    //initialize
+  }
+
+  public void getInput(){
+  }
+
+}
+
+public class Main{
+  IInput controller;
+
+  if(controllerInputDetected){
+    controller = new ControllerInput();
+  }
+
+  if(keyboardInputDetected){
+    controller = new KeyboardInput();
+  }
+
+}
+

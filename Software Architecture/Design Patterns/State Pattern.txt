@@ -1,0 +1,3 @@
+to handle the changing of states, have the deciding method of the state 
+return another state back up to the StateMachine instead of having a reference to
+the StateMachine in the States. It just doesn't make any sense.

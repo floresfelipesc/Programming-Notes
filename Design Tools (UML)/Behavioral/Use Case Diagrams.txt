@@ -1,0 +1,50 @@
+Before doing a Use Case Diagram you probably first want a Use Case Description
+
+A Use Case Description just walks through the process of what the actor is going
+to do and how the program responds from start to the finish (reaching the goal).
+This includes what lead up to the specified process (pre-conditions), and what 
+follows after the goal is reached (post-conditions).
+Steps for Use Case Description:
+1. Give a title. What feature is it?
+2. Preconditions. The conditions that must be true for the process to begin properly.
+3. Description. Describe the steps of the process from start to finish.
+4. Postconditions(Goals). The conditions that will be true when the process ends.
+These are that desirable outcomes that you count as a success.
+
+Once the description is written, you identify two key players in this description.
+The TRIGGER and THE ACTORS. 
+The TRIGGERS are things that ellicite a response from the program (like Input 
+from the User)
+
+The ACTORS are those who are outside of the program. (ie People). 
+
+
+
+
+ONLY AFTER this do you start to model the corresponding Use Case Diagram.
+
+A Use Case Diagram briefly details ALL possible use cases
+between your program and the actors (input givers, ie. users). 
+It does NOT detail a SINGLE use case. For that look to the sequence diagram...
+
+This provides a high level overview of the interactions between the
+actors and the program.
+
+The main tools used to make Use Case Diagrams are the following:
+1. A box that incases and represents which part of the model is the system.
+2. Actors represented in stick figures.
+3. Every use case represented with an ellipse and a phrase containing a verb.
+
+4. Lines that show the relationships between actors, use cases, and other use cases.
+   (These lines fall within the following categories):
+      4a. Association, a solid line with no arrow, indicates a connection
+          between the Actor and use case. (this interaction is guaranteed to happen)
+      4b. Generalization, a solid line with arrow tip, indicates inheritance (is-a
+          relationship) 
+      4c. Include/Extends, a dotted line with an arrow, indicates 1 of 2 things.
+          Include means that this use case connected to the original will ALWAYS
+          execute (arrow points TOWARDS what you include). 
+          Extends means that this use case connected to the original
+          will OPTIONALLY execute. (arrow points FROM what you extend)
+
+ 

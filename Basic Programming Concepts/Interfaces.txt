@@ -1,0 +1,45 @@
+An interface is a contractual obligation where you define ALL the methods or variables
+as being on a contract (consider it a shorthand to labeling a whole class and
+everything in it as abstract) where you may not go into detail of the implementation,
+but you must make sure that it MUST be implemented. 
+
+WHY TO USE: An interface lacks the flexibility of being able to pick and choose which 
+aspects are abstract and which can have a default implementation, but it benefits for 
+being a quick way to label a class and everything in it as abstract. It also 
+benefits that instead of using inheritance, it uses implementation. 
+
+*IMP*A class would only be able to inherit from an abstract class ONCE, meanwhile a
+class can implement MULTIPLE INTERFACES with no such limits and be forced to implement
+many different thing. 
+
+*IMP*Interfaces can also heavily benefit from polymorphism, as the interface can be used
+as a variable that can be treated as their subclasses (performing differently with
+the same code/methods).
+
+*IMP*Using Interfaces and implementation instead of Inheritance allows you to benefit
+from polymorphism and allows you to define common things without forcing a tight class
+dependancy. 
+
+OVERALL INTERFACES ARE MUCH MORE POWERFUL THAN STRAIGHT UP INHERITANCE
+
+HOW TO USE:
+You declare something is an interface by using the interface keyword in place of where
+the class keyword typically goes.
+
+public interface MyInterface{
+
+  void Write(string filename); //no implementation, no body
+
+}
+
+*methods only require a return type and parameter, and have NO BODY
+
+
+Then to implement the interface to a class, the process is the same as if you 
+were inheriting from a super class
+
+public class Player : MyInterface{
+  public void Write(string filename){ //must include this or error
+    //FINALLY detail the specifics.
+  }
+}

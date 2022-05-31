@@ -1,0 +1,44 @@
+Used to visualize how a SINGLE use case will run in your program in sequential order. 
+Remember that sequence diagrams only cover the main most critical parts
+of the process, it will not cover every conditional and iteration.
+There is no need to diagram every part of the application though, use only
+for things that are unclear.
+
+1. First you start by listing all the nouns (will be objects in your program)
+and making them into boxes in a row at the top. 
+Make sure that the left most noun is the one who initiates   
+
+2. Then you extend dashed lines going down from each of these boxes.
+These are called "lifelines" and represent the timelines of the objects.
+Time passes top to bottom within these lifelines. 
+
+3. Activation bars (represented in solid rectangles) indicate an area where 
+interactions and responses are happening.
+More specifically, it defines when the objects is staying active.
+This helps to organize things better.
+
+4. Messages
+Solid lines with arrowhead with a tag on top it (usually a verb, which will 
+become a method).
+These represent an interaction between 2 objects.
+These can either be from left to right, or right to left, or just loop back into
+itself (represents a process taking place within an object)
+
+5. Return Message
+Dashed lines with arrowhead is used to indicate that the message receiver
+is done processing the initial message and is returning an piece of data
+(or whatever). Return messages are apparently optional pieces that 
+are implied since a message will always return something. 
+
+
+We can also encapsulate a message into a big box around the whole thing 
+to state that that particularly part loops
+Drawing an X in the lifeline signify that the lifeline of the object is over,
+meaning the object is deleted.
+
+
+
+
+
+
+

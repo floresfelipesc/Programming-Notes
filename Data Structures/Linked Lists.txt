@@ -1,0 +1,25 @@
+Analogy: Think of a train with all of it's carts and chains linking them together.
+The head is the front of the train and tail is the back of the train.
+
+Linked Lists take advantage of the concept of a class containing a var of itself 
+within its class. This creates a chain of classes than contain a reference to 
+another instance of itself. We typically call these classes Nodes.
+
+Sequential access instead of random access, that means that to access something
+you always must traverse through the list instead of directly refering to its location.
+ 
+See Java Code below to get an idea of how it is done: 
+
+
+public class Node{
+  int data;
+  Node next;
+
+  public Node(int newData){
+    data = newData;
+    next = null;
+  }
+}
+*SEE DATA STRUCTURE TRENDS CAUSE MOST THINGS ABOUT LINKED LISTS ARE COVERED THERE
+SINCE LINKED LISTS ARE OFTEN USED AS THE BASE FOR ALL THE OTHER DATA STRUCTURES DUE 
+TO THE ADVANTAGE THAT LINKED LISTS ARE GREAT FOR DATA MANIPULATION. 

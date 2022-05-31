@@ -1,0 +1,23 @@
+All these Patterns are ways to deal with one to many dependencies.
+One to many means that one thing has a relationship with many other things.
+
+In the State Pattern, one object has a relationship with many other behaviors. 
+This is where the one object chooses one of these many behaviors to exude depending
+on its internal state.
+Ex: Player performing one action at a time such as run, jump, idle depending on input.
+
+In the Component Pattern, one object has a relationship with other objects
+that span multiple domains. This is where the one object is the body ran by it's 
+many different parts(components/organs). This breaks up what would have been a 
+monolithic class.
+The body can also function as a middle man for all these parts to communicate with one 
+another. 
+Ex: Player being a container for running input, physics, and animation components.
+
+In the Observer Pattern, one object has a relationship with other objects 
+where the one objects sends a signal to all other objects to enact their
+individual actions. This is where many objects need to do something based off of the
+state of a single object.
+Ex: Flare is sent out. Send in helicopters, ships, and zombies.
+
+NOTE: ALL 3 WILL BENEFIT GREATLY FROM INTERFACES AND THE POLYMORPHISM GAINED FROM INTERFACES

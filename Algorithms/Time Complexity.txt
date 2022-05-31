@@ -1,0 +1,9 @@
+Not all computers have the same performance.
+Computer Specs, Memory, Disk Space, Other processes running, etc.
+
+So in order to be able to measure performance time in a consist manner across all these
+other factors.
+
+So we use Complexity: A measure of the computing resources that are used by a piece of code.
+
+We represent it in Big-O notation. Ex: quadratic algorithm O(N^2) or O(N logn)

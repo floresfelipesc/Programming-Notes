@@ -1,0 +1,54 @@
+The definition of abstract is something that does not have a physical or concrete
+existance.
+
+Whenever something is labeled with the abstract keyword, it functions like a contract or 
+promise. You may not go into the specifics and detail the implementation, but you must 
+make sure that those things MUST be implemented.
+However, you can also choose things within a class to NOT have the abstract keyword
+and still provide a default implementation. 
+It is this flexibility to choose what is on a contract and what is not,
+that Interfaces lack. 
+
+
+WHY TO USE: This is useful for defining a superclass that you have no plan of 
+making instances of, and allowing you to choose what MUST be implemented and what 
+will have a default implementations (unlike interfaces).
+
+
+HOW TO USE: Classes can be marked as abstract, making it so you can't actually create an 
+instance of the class. At this point you cannot make an instance of that class and
+MUST create an instance of a class that DERIVES FROM the abstract class instead. 
+At this point, the methods within can still pass on a default implementation to the 
+subclasses. 
+
+ex: public abstract class Player{
+      public void MakeMove(){
+        //default 
+      }
+
+}
+In order to make it so that the methods themselves do not have any default implementation
+you must also label the methods as abstract. This way the subclass does not have any
+default implementation for it's methods, only that THEY MUST implement the method. 
+The defining is all done in the children.
+
+
+
+ex:
+
+public abstract class Player
+{
+    public abstract void MakeMove(); // no body of method
+}
+
+public class Scout:Player{
+
+    public Scout(){
+      //construct...
+    }
+
+    public void MakeMove(){
+      //This HAS to be made or else compiler error.
+    }
+
+}

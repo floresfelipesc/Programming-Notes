@@ -1,0 +1,20 @@
+Class Diagrams are used to model your classes within your code and how 
+these classes communicate with each other. 
+
+Each model of a class is going to be made up of 3 different things
+1. It's name at the top
+
+2. The variables that it will contain (this could also include other Classes as 
+well). 
+You must specify whether the variable is PUBLIC OR PRIVATE (with plus
+sign or minus sign respectively), the TYPE of variable that it is, and the name
+of the variable itself.
+
+3. The methods that it will contain (this includes constructors as well). 
+You must specify whether the method is PUBLIC OR PRIVATE (with plus sign or
+minus sign respectively), the name of the method, the RETURN TYPE, and 
+the PARAMETER TYPE 
+
+Now to model the relationships in between classes we have several options:
+The main 3 are Inheritance, Composition/Aggregation, and Dependency/Association. 
+See the other txt files in this folder for more info. 

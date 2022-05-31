@@ -1,0 +1,27 @@
+When it comes to UML Diagrams there are 2 types that you will need to use.
+Static and Behaviorial. 
+
+Static is the concrete part of the program that does not change
+(hence static), namely the way that the classes are coded. 
+This is a nice way to see how your code will be structured with all its 
+Composition and Inheritance needs. 
+
+Under this house we have Class Diagrams and Activity Diagrams. 
+
+
+Behavioral is the part of the program that changes over time, namely
+what occurs and can possibly occur during runtime. 
+This is a nice way to see how your objects change during runtime in response to
+"actors" (people who give input). 
+
+Under this house we have Use Case Diagrams and Sequence Diagrams.
+
+
+IMP NOTES: The three Most important Diagrams are the Use Case Diagram, Sequence 
+Diagram, and Class Diagrams
+IN GENERAL, you use these diagrams in the following order to model and code a
+project 
+Use Case Description + Use Case Diagram : WHAT it does - classes & methods
+Sequence Diagram : WHEN it does - sequence of methods
+Class Diagram : WHAT the classes look like - code of classes 
+Activity Diagram : HOW it does it - code of methods

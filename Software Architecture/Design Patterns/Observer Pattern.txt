@@ -1,0 +1,45 @@
+You make the Iobservable and Iobservers their own interfaces.
+Then any concrete observabes and concrete observers implement those interfaces.
+
+IObservable should a list of observers and have the ability to register observers, 
+unregister observers.
+It should also have a notify method where it enacts the functions that the observers
+are supposed to do when notified.
+
+IObserver should have their own behaviors that they enact to respond to the signal
+from IObservable.
+
+public interface IObservable{ 
+  
+  void add(IObserver i);
+  void remove(IObserver i);
+  void notify();
+}
+
+public class ConcreteObservable:IObservable{
+  IObservers[] listOfObservers;
+
+  public ConcreteObservable(int i){
+    listOfObservers = new IObservers[i];
+  }
+
+  public void add(IObserver i){
+    listOfObservers[0] = i; 
+  }
+
+  public void notify(){
+  for(int i = 0; i < listOfObservers.length; i++){
+      listOfObservers[i].update();
+    }
+  }
+  //implement other methods...
+}
+
+
+public interface IObserver{
+  public void update();
+}
+
+public class ConcreteObserver:IObserver{
+  public void update();
+} 

@@ -1,0 +1,76 @@
+
+square inherits from polygon
+class Square : Polygon
+{
+    //...
+}
+WHY TO USE: Inheritance allows you to reuse classes by expanding them into more 
+specific classes.  
+
+There is the superclass and the subclasses. Superclasses define the common
+behavior that subclasses will inherit from while
+the subclasses inherit behaviors of the superclasses.
+
+Subclasses inherit variables, properties, and methods as long as they have 
+the access modifier of public or protected. 
+As you know public allows
+all classes to access it meaning that subclasses will inherit from public
+stuff, while protected only allows the subclasses to inherit
+the variable, property, or method.
+
+HOW TO USE:
+When setting up for a method of a subclass to override a method inherited from
+the superclass, the superclass should have the method with the keyword virtual
+while the subclass has the keyword override. 
+
+The base version of a method can be accessed by using the base keyword. 
+(base.update()).
+
+
+Constructors are a bit different. Since a derived class is based on another 
+class, as we're creating a subclass's constructor, we will also 
+need to choose a constructor to use from the superclass.
+This is done with colon base then the parameters of whichever constructor from
+the base class that you want. 
+public Square(float size): base(4)
+{
+    Size = size;
+}   
+
+Polymorphism 
+WHY TO USE: Polymorphism gives the ability to treat a superclass as its several 
+different subclasses. This allows for the methods of the superclass to be treated as 
+their subclass's methods counterparts. This way you can essentially use the methods
+of the superclass and it will produce difference outputs based upon what subclass 
+you decide to treat it as. 
+
+
+HOW TO USE: 
+
+Polymorphism is useful because it can allow to make an array containing different 
+types because they are all considered as their superclass. And this is just ONE
+good use.
+
+Polygon[] arrayofShapes = new Polygon[5];
+arrayofShapes[0] = new Square();
+arrayofShapes[1] = new Rectangle();
+//and so on... this is all valid.
+arrayofShapes[0].GetArea();
+
+If the method of this Square shape is called and does not have the override 
+keyword where it is defined, then it will instead use the base class's version of 
+the method (belonging to Polygon).
+
+
+
+SPECIAL NOTE: 
+After messing around I found that you can also treat the subclasses as their 
+superclass like this:
+
+Square mySquare = new Polygon();
+mySquare.UseMethod();
+
+This code right here implies that you can treat all subclasses as the same
+superclass, the reverse of the above definitions. This is possible but then why 
+the would you do this instead of just sticking with only using the parent class
+in the first place? This is useless.

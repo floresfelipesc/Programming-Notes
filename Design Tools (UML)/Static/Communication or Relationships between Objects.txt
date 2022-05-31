@@ -1,0 +1,89 @@
+There are 3 main relationships that objects can have between each other that can be 
+reflected within  a model. (Composed of/Aggregation, depends on/Association
+, inherits from)
+GENERALLY EACH OBJECT SHOULD HAVE JUST ONE RESPONSIBILITY.
+
+1.COMPOSED OF/AGGREGATION means that an object creates an instance of another object 
+within itself. Composition means that the subclass CANNOT exist without the 
+container that it is in, while Aggregation means that the subclass CAN exist 
+on its own and has its uses without the container. 
+You can tell when you should have this relationship if you can state a HAS-A 
+relationship between objects.
+*You denote this with a filled in arrow. 
+
+public class Size{
+  private int x, y;
+  ...
+}
+
+public class Shape{
+  private Size mySize;<----- instance created INSIDE another class
+
+  public Shape(Size mySize){
+    this.mySize = mySize;
+  }
+}
+
+
+2.INHERITS FROM means that object inherits from a baseclass or implements from an 
+interface. This can be taken advantage of to benefit from polymorphism. You can tell 
+when you should have this relationship if you can state an IS-A relationship 
+between objects.
+*You denote this with a hollow arrow
+
+public class Shape{
+}
+
+public class Square:Shape{
+}
+or 
+public interface IShape{
+}
+public class Square:IShape{
+}
+
+
+3.DEPENDS ON means when an object receives a reference to another object to use in 
+a method or reading it through a middle man.
+You denote this with a dashed line arrow.
+
+public class Shape{
+  public Shape(){}
+
+  public void render(Document document){ <-----reference passed into this method
+    //
+  }
+}
+*NOTE: As far as I currently know you want to avoid Dependancies as it makes
+your code less flexible and more entertwined (if one things falls then 
+everything falls).
+
+
+
+
+
+At a more base level here are your objects for communication:
+
+1.Passing in a reference to the 2nd object through the 1st object's 
+Constructor's parameter. 
+(If you need the 2nd object from the beginning at all times to do several things)
+(COMPOSITION/AGGREGATION)
+
+2.Passing in a reference to the 2nd object through a Method's parameter.
+(IF you need the 2nd object only for just one method to do one thing)
+(DEPENDANCY)
+
+3.By asking for a reference to the 2nd object through a 3rd object. 
+(Middle Man Approach). The 1st object talks to the 3rd object who is the one
+who has the reference to the 2nd object. The Middle Man (3rd object) could house 
+severalreferences to a variety of objects or variables that different domains will 
+need.
+(Uh idk but it's an option resulting from when an object houses another object so...
+Composition?)
+*THIS IS ESSENTIALLY WHEN AN OBJECT HOUSES OTHER OBJECTS WITHIN THEM*
+
+Using a static member that is accessable to everyone no matter where.
+This can enable the Observer Pattern.
+(Making things static can be risky, keep to a minimum as it can get overloaded fast.)
+
+

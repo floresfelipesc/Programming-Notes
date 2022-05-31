@@ -1,0 +1,4 @@
+When a pointer points at another pointer, what happens is that they point at the 
+same object in space. NOT that the pointer points to whereever the second pointer 
+is pointing. This distinction is important as you can swap the second pointer to 
+point at something else while the first one remains pointing at the original object.

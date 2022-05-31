@@ -1,0 +1,46 @@
+A technique used to increase readibility of code by reducing the need for 
+nesting if statements within each other.
+
+This is achieved by having multiple exit points within a method (ie multiple
+return statements). One of these exit points is executed when an if condition 
+is passed as true, in which case further checks are skipped.
+
+These if conditions can be seen as guards or filters, where they decide as to
+whether or not the input is a valid criteria.
+
+This reduces splitting paths within code and makes it more "flat".
+
+Ex: 
+
+public bool dataMatch(Node inputNode, int desiredVal){
+
+  if(input != null){
+
+    if(inputNode.data == desiredVal){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
+  else{
+    return false;
+  }
+
+}
+
+VS.
+
+public bool dataMarch(Node inputNode, int desiredVal){
+  if(input == null){
+    return false;
+  }
+
+  if(inputNode.data != desiredVal){
+    return false;
+  }
+
+  return true;
+}
+This is much easier to read and follow than a bunch of nesting.

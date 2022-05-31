@@ -1,0 +1,59 @@
+A common Trend in Data Structures is that each of them are 
+made up of Nodes.
+
+A Data Structure itself often times just contains the first Node
+of their structure called head. This is to keep track
+of the beginning of the chain and not lose it to the 
+eager darkness.
+Data Structure's duty is also to initialize the first node to 
+start the chain.
+
+class DataStructure{
+  Node head;
+
+  public DataStructure(int data){
+    head = new Node(data);
+  }
+
+  public AddNode(Node newNode){
+    Node iterator = head;
+    while(iterator.next != null){
+      iterator.next = newNode;
+    }
+  }
+
+}
+
+Within each Node contains data and another Node variable within it that 
+functions as the pointer to the next Node. This Node
+within a Node pattern allows for the Nodes to make chains of themselves,
+waiting for them to be manipulated for your benefit. 
+
+class Node{
+  int data;
+  Node next;
+  public Node(int desData){
+    data = desData;
+    next = null;
+  }
+}
+
+Finally in order to TRAVERSE these data structures safely without
+disturbing the chain, you cannot do it through manipulating any of the 
+pre-established pointers forming the chains themselves. These include such
+pointers as the head pointer or any of the next pointers. 
+
+If you use the head pointer made in the data structure class,
+you will lose the beginning of the data structure and things will be all
+out of order.
+If you use any of the next pointers in each of the Nodes class, you would just lose
+a huge chunk of the chain. 
+
+
+The solution is to create ANOTHER Node pointer that is equal to
+the head pointer made in the data structure. This way whatever change you
+make to this new pointer won't affect the begining of the structure
+and it doesn't disrupt the chain. Plus you also now start your traversal
+at the beginning of the structure :) little benefit of setting it
+equal to the header pointer. Because of this, technically you could start 
+from any other pointer but why would you do that? 

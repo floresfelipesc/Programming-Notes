@@ -1,0 +1,23 @@
+Best Case: O(N) Worst Case: O(N^2)
+Good for small N
+
+There are 2 major sections in this algorithm.
+Sorted Portion and Unsorted Portion.
+
+You always start by taking in the first element of the array
+into the sorted portion, the rest is considered unsorted.
+
+Then you go take the first element of the unsorted portion
+and compare that with the element in the sorted portion,
+placing it in the correct spot. 
+As the sorted portion grows, you will have to go down the sorted 
+portion elements doing a check each time if the new item your are 
+introducing from the unsorted portion is less than the element you are 
+comparing it in the sorted portion. 
+
+QUICK:
+The first array item is the sorted portion of the array
+Take the second item and insert it in the sorted portion
+
+Repeat steps 1 and 2 to sort the remainder of the array                       
+

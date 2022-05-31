@@ -1,0 +1,14 @@
+Divides what you have to search by half! O(N/2)
+
+Compare what you want with the element located in the middle
+of the array. 
+
+If you found it, great!
+
+If not check the top half of the array or the bottom
+half of the array depending if the value you are trying to locate is > the middle
+ or < the middle. (go to top half or bottom half respectively). 
+
+Repeat till you found it. 
+
+*This only works if the array is previously sorted!

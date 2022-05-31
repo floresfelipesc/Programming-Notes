@@ -1,0 +1,16 @@
+O(N^2)
+Almost never fucking used.
+
+Find the minimum item in the unsorted  part of the array
+
+Swap it with the first item in the unsorted  part of the array
+
+Repeat steps 1 and 2 to sort the remainder  of the array
+
+ANALOGY: Think of the scenario where we are sorting an hand of cards
+We look through all the cards and find the smallest number first, 
+then we swap that minimum number with the first part of the array 
+than is still unsorted. 
+
+Do this for the remainder of the array.
+

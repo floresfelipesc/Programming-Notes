@@ -1,0 +1,46 @@
+My goal with this is to note my workflow when it comes to programming a solution 
+to a problem or toward a goal. I wanted this process to not only to have better
+documentation of my work to my future self, but to also have a means of explaining
+clearly to people who are not familiar with programming what my program does. 
+
+Here is my general approach when wanting to code up a solution to a problem
+or with the express of achieving a goal.
+
+The way you work towards these issues is that first you define and understand the 
+problem(define the end), then you see where you are at and what you currently have
+(define the beginning), and then working towards the end from the beginning (filling
+in the blanks). The knowledge of coding languages comes in as being a toolbox
+on what actions you can take to build a bridge between the beginning and the end.
+
+If you are artistic, think of this as first defining the keyframes of a scene
+in animation, and then drawing the in-betweens. 
+
+
+SO now keeping this in mind here's the low-down
+1. First state the problem/goal using pure English. 
+
+2. Then start to model the problem and it's steps through simple drawings and diagrams.
+Convey the steps by iterating on these drawings for clarity.
+Model any scenarios you can think of and model those steps too. 
+
+3. Then start to detail steps from the start to the goal using pure english
+onto a flowchart. 
+
+4. Iterate each step within the flowchart, breaking them up until they can only be
+broken up further into specific programming language.  
+
+5. Check to see if it would work, checking if there are any cases of input 
+(or whatever) that would not be taken care of by the steps you made. Essentially
+Trial running.
+
+6. Using the flow charts:Model the classes, methods, variables and their relationships 
+with the UML Class Diagrams making note of Composition/Aggregation, Inheritance, and 
+Dependancies.
+General tips: Nouns into classes, verbs into methods. 
+
+7. Write the code. Thanks and have fun!
+
+8. Refactor as needed. 
+
+
+

@@ -1,0 +1,30 @@
+Main use for them is to have access to a variable outside of its class
+but prevent it from allowing it to be changed. 
+
+Otherwise the classic way of creating methods for that sole purpose 
+(Getters and Setters) needs to be used, which is tedious
+
+Kind of like a pseudo between
+private and public. 
+
+public int Score
+{
+    public get
+    {
+        return score;
+    }
+    private set
+    {
+        score = value;
+    }
+}
+
+Properties are normally capatilized. The set part uses the keyword value,
+the get part returns whatever value you want. 
+
+Both get and set do not have to be present.
+
+You can also add any checks or any additional code to run within get or set
+when calling them respectively. 
+
+public int Score { public get; private set; }

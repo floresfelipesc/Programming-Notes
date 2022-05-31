@@ -1,0 +1,28 @@
+Composition over inheritance in object oriented programming is the principle that 
+classes should achieve polymorphic behavior and code reuse by their composition
+(by containing instances of other classes that IMPLEMENT the desired functionality)
+rather than inheritance from a parent class. 
+
+
+Deep inheritance can get messy, as a chain of inheritance usage can mean that 
+certain functionalities in a subclass are hidden within a number of parent classes.
+
+Inheritance also runs into the issue of being inflexible. If you have 1 parent class
+and three different subclasses that inherit from the 1 parent, you are screwed if 
+you want to define a common functionality between only 2 of the children.
+You either have to define it in the parents and then go out of your way to override
+it in the 1 child who doesn't need the functionality, or you just repeat the 
+function twice in both of the children. This is one example of how it can get messy.
+
+
+Use Composition during these 3 scenarios: 
+You have a class that touches multiple domains which you want to keep decoupled
+from each other.
+
+A class is getting massive and hard to work with.
+
+You want to be able to define a variety of objects that share different 
+capabilities, but using inheritance doesn’t let you pick the parts you want
+to reuse precisely enough.
+
+This also improves extendability.

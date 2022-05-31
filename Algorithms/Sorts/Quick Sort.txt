@@ -1,0 +1,14 @@
+Best Case: O(N logn) Worst Case: O(N^2) depends on luck of pivot. 
+You want the pivot to be the most center VALUE possible. 
+
+Select an item in the array to be the pivot
+Partition the array so that all items less than the pivot are to the left of the pivot,  
+and all the items greater than the pivot are to the right
+
+
+Repeat the previous process on the left half
+Repeat the previous process of the right half
+
+Do this until each element of the array is by itself. 
+
+Quick sort is "on the way down" sorting.
