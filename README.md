@@ -8,6 +8,7 @@ In my opinion, the best way you can learn a topic is by teaching it to someone
 who is not an expert at them.
 
 As a result, I created these notes as if I were to get amnesia one day and have to 
-catch myself up on all that I have forgotten.
+catch myself up on all that I have forgotten. All code examples found are done 
+in C#.
 
 Have fun seeing the topics I have covered!
