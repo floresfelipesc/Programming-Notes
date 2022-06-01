@@ -1,0 +1,22 @@
+Testing your code is how you find out whether or not it works in the way you
+intended.
+In my opinion, tests should be written before you start coding.
+This is because it serves as an reference point on what your code should 
+be able to handle. It helps to keep your code "focused".
+As a result, you will be able to catch any errors in your code
+early. Catching errors early saves on time trying to search for the error later.
+
+This is Test Driven Development. 
+
+There are 3 levels of tests in Test Driven Development: Unit Tests,
+Integration Tests, End to End Tests. These escalate in time required to make from 
+left to right. Generally Unit Tests should be the most common test you make, 
+Integration Tests should be the second most common test, and End to End Tests
+are the rarest.
+
+Personal Note: It seems like I have personally involuntarily 
+been doing this for a long time now. One of my first actions when breaking down
+a problem is to come up with several different key inputs and then writing down 
+the expected output. I then come up with steps to solve the problem while
+keeping in mind that the steps must account for the various inputs 
+and output the according results.
