@@ -1,0 +1,35 @@
+Attributes seem to be a C# exclusive, but other languages seem to have their own
+version of this C# feature (ex: in Java it is called "Annotations").
+
+The official description of this feature is that Attributes "add metadata 
+to different parts of your code". 
+In laymens terms, Attributes are used to 
+place different labels on specified parts of your code. These labels function as
+indicators to the compiler that it should treat the labeled code in various ways
+depending on WHICH indicator is used.
+
+WHY TO USE: This has a variety of implications, such as labeling code to be 
+exempt in certain scenarios. However, the most immediate use for this I see
+is to label classes and methods as Tests for the purpose of Unit Testing
+the functionality of the classes and methods in some other code.
+
+The compiler will see the labels and run the test accordingly, complete
+with input, expected output, and whether or not the test has passed.
+
+HOW TO USE: 
+
+[TestClass]
+public class ClassForTesting{
+
+  [TestMethod]
+  public void MethodForTesting(){
+    //initialize other class to use other methods, and craft the input it will all
+    //use.
+    //Use Assert to compare the CONCEIVED result to the EXPECTED result in relation
+    //to your crafted input
+  }
+
+}
+
+The compiler will run this and give you feedback on whether or not your test is
+successful. 
