@@ -63,7 +63,7 @@ public class KeyboardInput:IInput{
 
 public class Main{
   IInput controller;
-
+  controllerInputDetected = Read.Input;
   if(controllerInputDetected){
     controller = new ControllerInput();
   }
