@@ -1,14 +1,19 @@
 The static keyword makes it so that variables or methods belong to the class itself.
+This also means that whatever labeled as static is a single instance SHARED across
+all classes. Be wary of this to avoid unintended effects.
 
 WHY TO USE:
-This makes it so that they belong to the class itself, and do not need an instance 
-of that class to be able to refer to variables or use the methods(can save on time, 
-especially when you have a specific function you want to use but don't really need
-anything other than that). 
-The thing marked as static now exists as one global instance that is shared with all
+This makes it so that they belong to the class itself, so you do not need create 
+an instance of that class to be able to refer to variables or use its methods.
+This can save on time, especially when you have a specific function you want to 
+use across a wide variety of classes. 
+This is most commonly used with methods that provide some small utility of some
+sort, like doing a complicated math operation or making a convenient way to access
+time (These would be Math.method and Time.variable respectively) 
+The item marked as static now exists as one global instance that is shared with all
 instances of the class, hence static.
 ie. Console.WriteLine();
-Valve.isProductive; - false
+Valve.HLProgress;
 Math.Power(motivation);
 
 HOW TO USE: 
@@ -17,12 +22,10 @@ Personally, I think static is best used to define a class as static.
 
 You can use a static class as a global place of grouping a set of methods not 
 associated with any particular objects. 
-Also, a static class can make your implementation simpler and faster because 
-you do not have to create an object in order to call its methods.
 
-This makes it so that you cannot make an instance of that class (like abstract classes
-except in abstract classes are just a contract and do not detail any actual functionality). 
-You just call it's name and access all the static variables and static methods within.
+This makes it so that you cannot make an instance of that class.
+You just call it's name and access all the static variables and static methods 
+within.
 
 A good example of this is the KeyBoard Class where it only has useful methods
 to get the state of a keyboard.
@@ -38,20 +41,6 @@ public class Main{
   bool testBool;
 
   testBool = Keyboard.MoveCheck();//can use this unique method from the static class
-  //WITHOUT having to create an instance of the class. Saves on that creation process.
-}
-
-Another good example is in use with the Observer Pattern, you can make a 
-static method for an Observed to be able to use and register any Observer
-throughout the other classes :]
-
-EX:
-public static class Observed{
-  public static void Notify(){
-    //let the listener know (hey babe new dunkey vid is out)
-  }
-}
-
-public class Observer{
-  P//TO BE CONTINUED LOOK AT TEXTBOOK
+  //WITHOUT having to create an instance of the class. Saves on that creation 
+  //process.
 }
