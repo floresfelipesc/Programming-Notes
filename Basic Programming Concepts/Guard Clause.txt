@@ -8,8 +8,10 @@ is passed as true, in which case further checks are skipped.
 These if conditions can be seen as guards or filters, where they decide as to
 whether or not the input is a valid criteria.
 
-This reduces splitting paths within code and makes it more "flat".
+WHY TO USE: This reduces splitting paths within code and makes it more "flat,
+making code generally easier to read.
 
+HOW TO USE:
 Ex: 
 
 public bool dataMatch(Node inputNode, int desiredVal){
