@@ -28,7 +28,7 @@ the class keyword typically goes.
 
 public interface MyInterface{
 
-  void Write(string filename); //no implementation, no body
+  public void Write(string filename); //no implementation, no body
 
 }
 
