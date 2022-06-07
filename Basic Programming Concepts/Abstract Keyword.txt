@@ -22,9 +22,7 @@ At this point, the methods within can still pass on a default implementation to 
 subclasses. 
 
 ex: public abstract class Player{
-      public void MakeMove(){
-        //default 
-      }
+      public abstract void MakeMove(); //cannot declare a body since abstract
 
 }
 In order to make it so that the methods themselves do not have any default implementation
@@ -47,8 +45,9 @@ public class Scout:Player{
       //construct...
     }
 
-    public void MakeMove(){
-      //This HAS to be made or else compiler error.
+    public override void MakeMove(){
+      //This HAS to be made or else compiler error. It overrides because 
+      //the original is abstract, check inheritance notes for more details
     }
 
 }
