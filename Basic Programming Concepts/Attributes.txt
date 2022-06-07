@@ -32,4 +32,5 @@ public class ClassForTesting{
 }
 
 The compiler will run this and give you feedback on whether or not your test is
-successful. 
+successful as well as giving you useful information like how fast did 
+the code run, etc. 
