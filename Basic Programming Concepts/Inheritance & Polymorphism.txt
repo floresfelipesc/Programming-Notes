@@ -37,6 +37,20 @@ public Square(float size): base(4)
     Size = size;
 }   
 
+Methods can be overridden if the parent class/child class share the same 
+name and arguments for the method. Overriding provides a new implementation 
+specified in the child class that ignores the implementation of the parent class' 
+version of that method. 
+The Parents class version must be labeled as virtual, abstract, or override
+to be able to override the method in a child class
+PARENT CLASS VERSION-
+public virutal void GetArea(int x, int y){
+}
+CHILD CLASS VERSION-
+public override void GetArea(int x, int y){
+}
+
+
 Polymorphism 
 WHY TO USE: Polymorphism gives the ability to treat a superclass as its several 
 different subclasses. This allows for the methods of the superclass to be treated as 
