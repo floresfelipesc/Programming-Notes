@@ -1,0 +1,29 @@
+Generics allow for a way to generalize type defining by simply defining it later in
+the program. They are types to-be-specified later. Why woud you want this?
+
+WHY TO USE: Generics solve the issue that variables, and by extension methods,
+to be type specific. When you create a variable of type int, you are binded to
+that specific type of variable. Same goes for methods.
+  EX: public void Calculate(int x, int y){
+        //some code
+      }
+This method can only take arguments of type int. What if we wanted for it to 
+handle doubles?
+Then we would have to create another version that takes in doubles, like so
+  EX: public void Calculate(double x, double y){
+        //some code
+      }
+This is quite redundant as you would have to duplicate code. This is where
+Generics come in. Generics allow us to make a more flexible variable/method 
+that could be of multiple types. This is because we can simply just define the 
+precise time "later" when we use the method/variable itself.
+
+HOW TO USE:
+TO BE CONTINUED
+
+
+
+
+
+If you would like a method that performs the same operation on integers PLUS
+other types of variables 
