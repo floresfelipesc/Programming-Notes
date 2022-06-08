@@ -1,26 +1,49 @@
 Generics allow for a way to generalize type defining by simply defining it later in
-the program. They are types to-be-specified later. Why woud you want this?
+the program. They are types to-be-specified later. Why would you want this?
 
 WHY TO USE: Generics solve the issue that variables, and by extension methods,
-to be type specific. When you create a variable of type int, you are binded to
+are "type specific". When you create a variable of type int, you are binded to
 that specific type of variable. Same goes for methods.
   EX: public void Calculate(int x, int y){
         //some code
       }
-This method can only take arguments of type int. What if we wanted for it to 
+This method can only take arguments of type int. What if we wanted it to 
 handle doubles?
 Then we would have to create another version that takes in doubles, like so
   EX: public void Calculate(double x, double y){
         //some code
       }
-This is quite redundant as you would have to duplicate code. This is where
-Generics come in. Generics allow us to make a more flexible variable/method 
-that could be of multiple types. This is because we can simply just define the 
-precise time "later" when we use the method/variable itself.
+This is quite redundant as you would have to duplicate code with minimal changes. 
+Remember D.R.Y (Don't Repeat Yourself).
+This is where Generics come in. Generics allow us to side-step the issue of needing
+to make multiple classes or methods that would differ only by their types by 
+leaving a placeholder where we define the type later when we use them. 
+Generics essentially lets us make a more flexible variable/method that could be 
+of multiple types depending on how they are used.
 
 HOW TO USE:
-TO BE CONTINUED
+Generics are used as a generic type argument(similar to how you pass variables 
+when you use a method)
 
+EX: 
+public class List<T>{
+  //code where T is substituted as a type
+}
+
+List<int> numbers = new List<int>();
+
+The generic symbols <> always go immediately AFTER the name of whatever you want to
+include the generic into
+
+You can also inlcude multiple generics at once, similar to how a method can have 
+more than one variable as an argument.
+
+EX: 
+public class List<T,K>{
+  //code where T and K are used
+}
+
+List<int, double> myList = new List<int, double>();
 
 
 
