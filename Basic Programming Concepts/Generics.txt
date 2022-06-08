@@ -32,21 +32,21 @@ public class List<T>{
 
 List<int> numbers = new List<int>();
 
-The generic symbols <> always go immediately AFTER the name of whatever you want to
-include the generic into
+The generic symbols <> always go immediately AFTER the NAME of the TYPE of whatever
+you want to include the generic into
 
 You can also inlcude multiple generics at once, similar to how a method can have 
 more than one variable as an argument.
 
 EX: 
+1. For Class
 public class List<T,K>{
   //code where T and K are used
 }
-
+2.For Using it
 List<int, double> myList = new List<int, double>();
 
+3.For Methods
+public void Calculate<T>(T firstNum, T secondNum){
+}
 
-
-
-If you would like a method that performs the same operation on integers PLUS
-other types of variables 
