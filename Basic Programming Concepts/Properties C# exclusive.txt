@@ -2,6 +2,7 @@ Properties are a C# exclusive feature where it allows you to quickly define
 whether or not a variable can be read and whether or not a variable can be changed
 through the shorthand that Properties provide. 
 
+WHY TO USE:
 This is mainly used for keeping the good practice of making variables mostly
 private (to keep code on a need-to-know basis), while also sidestepping the issue
 that comes with this practice (a lot of Getters and Setters bloating a class).
@@ -16,6 +17,7 @@ However, you can stil make the "get" and "set" rights public or private
 depending on the access you want. Public means accessable by other classes,
 private means exclusively accessable to the same class.
 
+HOW TO USE:
 EX:
 public int Score
 {
