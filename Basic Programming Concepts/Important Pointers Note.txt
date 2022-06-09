@@ -1,4 +1,23 @@
 When a pointer points at another pointer, what happens is that they point at the 
-same object in space. NOT that the pointer points to whereever the second pointer 
-is pointing. This distinction is important as you can swap the second pointer to 
-point at something else while the first one remains pointing at the original object.
+same object in space. 
+
+The second pointer in the chain does NOT point to wherever the second pointer
+is pointing to.
+EX:
+Let's say we have two object, a and b
+a = 5;
+b = a;
+
+a ----> 5
+b ----> 6
+
+a = b;
+
+Now a is pointing at the same object that b is pointing to.
+As a result, any changes to b will also result in a change to a beccause
+they are pointing at the same thing.
+
+IMPORTANT NOTE: In this example, keep in mind that
+in this example you can now change the b pointer (second pointer) to 
+point at something else while the a pointer (first pointer)
+remains pointing at the original object.
