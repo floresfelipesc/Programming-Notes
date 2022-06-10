@@ -1,0 +1,28 @@
+Mistakes inevitably happen. We must take all the countermeasures we can to make 
+sure code is executed as intended.
+C# along other languages gives us useful tools to catch mistakes in the form of
+TRY and CATCH.
+
+WHY TO USE:
+Try and Catch blocks together allow us to catch and handle any incoming errors
+or complications that we forsee in a section of code. 
+
+The TRY block takes a piece of code to see if something goes wrong. If something 
+does arise, the try block creates a new instance of a class called
+Exceptions. This instance is then "thrown", in which the try block is looking for
+a handler to handle the Exception. The try block will search for a handler starting
+from the first call stack the code is in, and then searches further up the call
+stack if no handler is found.
+
+This handler that the TRY block searches for is the role that our CATCH block
+takes. The catch block can handle any exception specified that you foresee
+generating from the try block, and will execute code within itself according to
+the incoming exception.
+
+HOW TO USE:
+PENDING
+Our try block surrounds a piece of code. 
+try{
+  //your code that you expect there to be complications in
+}
+catch(Exception)
