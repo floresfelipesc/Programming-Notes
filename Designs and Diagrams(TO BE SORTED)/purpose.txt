@@ -1,0 +1,9 @@
+These are Designs and Diagrams that I have created as supplements for
+displaying the in-and-outs of how Data Structures are built/function.
+
+I mostly used UML Diagrams for these as well as a programming flowchart
+that makes things easier to see how certain functions are coded.
+
+These will be organized and sorted into their respective topics.
+
+This is a growing list that I will have to sort in time.
