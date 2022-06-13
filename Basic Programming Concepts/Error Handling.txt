@@ -25,4 +25,24 @@ Our try block surrounds a piece of code.
 try{
   //your code that you expect there to be complications in
 }
-catch(Exception)
+catch(Exception){
+  //code that will excecute in accordance to the specified Exception
+  //mentioned within the condition of the catch
+}
+
+In the condition of the catch, you can also specify a specific Exception.
+These types of Exceptions can be slightly different for each language, 
+so look them up online when picking out a type and what they correspond to.
+You can also include even more catch blocks in succession (not nested)
+
+You also have the option to create and throw exceptions on your own that 
+will function just like the try block does (you still need a catch to handle it).
+
+EX: throw new Exception(); // or any Exception you would like to specify.
+
+
+Granted, error handling in this way should be used with caution. 
+The nature of the try and catch block creates more nesting and overhead that
+may make code more difficult to read/understand. If you can avoid using these 
+features conveniently with simple logic like if statements, loops, etc, then
+use those instead of these features. 
