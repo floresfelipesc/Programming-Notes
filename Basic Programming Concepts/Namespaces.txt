@@ -1,0 +1,33 @@
+Namespaces are important to managing larger projects.
+They allow us to group a collection of classes under one name.
+
+WHY TO USE:
+You may have noticed that some "Built in" classes are not recognized by
+your program if you do not include a certain namespace with the using keyword.
+
+This is because those classes/methods belong to said namespace. 
+The Console class is one of the classes that belong to a namespace. Unless you 
+include the line "using System;" on top of your program, the compiler does not 
+recognize that the Console class even exists.
+
+Namespaces provide a fast way to be able to use groups of classes and methods
+in any other classes that you wish WITHOUT having to copy the whole section
+of code AGAIN in your current project. They also allow you to pick and choose 
+what you want to include in a fast convenient way.
+
+HOW TO USE:
+To create a namespace it goes as follows:
+namespace MathLibrary{
+  //your classes or types that you want to include in this group here
+  public static class Math{...}
+}
+note: You can also have namespaces nested in other namespaces.
+
+To include this group of classes to be used in another class you do as follows:
+
+using MathLibrary;
+public class MyProgram{
+  //refer to the namespace here
+}
+note: The inclusion of a namespace is done with the "using" keyword, and
+is typically done at the beginning of your program.
