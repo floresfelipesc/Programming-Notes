@@ -31,3 +31,15 @@ public class MyProgram{
 }
 note: The inclusion of a namespace is done with the "using" keyword, and
 is typically done at the beginning of your program.
+
+IMPORTANT NOTE for C# IN MICROSOFT VISUAL STUDIO: It seems that by default, 
+whenever you create a new class, that class is set to be included within a 
+namespace with the syntax above.  
+If you are confused as to why sometimes your program does not recognize a class
+you made within another class despite the both of them being labeled as public,
+namespaces are the reason why. Namespaces also make it so that those classes
+within itself are ONLY accessable from the use of the using keyword and within 
+other areas where you are defining that same namespace. 
+Make sure that if you do not want a class to be a part of a namespace, then
+remove the namespace syntax. As long as both class are public, then the 
+program will recognize both classes and you will be able to use them freely.
