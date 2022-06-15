@@ -1,0 +1,18 @@
+Assertions (or assert) are a way to tell your program to check if a value is equal
+to another value that you specify. Many programming languages come with this
+feature, but the exact keyword may vary.
+
+WHY TO USE:
+Assertions are another debugging tool, in which they allow you to catch errors
+in your code at runtime.
+
+They allow you to "make sure" or "assert" that a value should equal to 
+another value AT THAT MOMENT in your program. This is extrememly useful for
+catching logical errors early so that you know your code is on the right track.
+
+As a result, assertions (in my opinion) mainly useful for performing Unit Tests
+on your code (see Testing folder for more detail). I personally mostly use 
+assertions within and for Unit Tests.
+
+HOW TO USE:
+TO BE CONTINUED
