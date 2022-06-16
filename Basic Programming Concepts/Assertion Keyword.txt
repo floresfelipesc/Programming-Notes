@@ -15,4 +15,24 @@ on your code (see Testing folder for more detail). I personally mostly use
 assertions within and for Unit Tests.
 
 HOW TO USE:
-TO BE CONTINUED
+Assertions are best used when you know the intended result at a specific
+part of your code. This way you can assert that the actual result is the same
+as the intended result, and therefore you are on the right track. This is best
+for individual small parts of your code.
+
+It is for this exact reason that Assertions are useful tools for Unit Tests 
+since they overlap in purpose to test a small part of your code. 
+
+public class Prog01{
+  public static void main(String[] args){
+    int x = 5;
+
+    Assert.AreEqual(x , 5); //evaluates to true so no action is taken
+    Assert.AreEqual(x, 10); //evaluates to false so the compiler alerts you of this
+    //error at runtime
+
+  }
+}
+Keep in mind that this is not the only function Assert does in C#, there are
+many more methods available that may be more suitable for the tests that 
+you are conducting depending on what type of the value is. 
