@@ -1,3 +1,5 @@
+Analogy: Think of a line of people waiting to checkout at a cashier.
+
 (Peek, Enqueue, Dequeue)
 All these operations have a performance of O(1)
 
@@ -9,12 +11,14 @@ as front and back respectively.
 
 WHEN TO USE: The key to know is if the ORDER of data is important.
 Whenever you want to pay special priority to a thing that has occured
-LATEST IN THE PAST, use a queue. This is like taking care of the customer 
-that arrived first. Or...other things that I cannot think of. 
+FIRST (think of a person who came in first to a waiting room for a doctor), 
+use a queue. You wouldn't choose to first take care of a person who arrived to 
+the waiting room later, would you?
 
 If you have a scenario where you do not care about the ORDER in which data comes in,
 then look elsewhere.
 
+HOW TO USE:
 EX: 
 public class Queue{
   Node front;

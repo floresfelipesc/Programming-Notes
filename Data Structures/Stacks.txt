@@ -10,7 +10,7 @@ detail) only keeps track of the topmost item. Because of this you may
 as well call the head pointer top instead. 
 
 WHEN TO USE: Whenever you want quick access or pay special priority to 
-the most recent thing, use a stack. Visualize the undo shortcut seen everywhere 
+the most recent occurance, use a stack. Visualize the undo shortcut seen everywhere 
 in software. Or sifting through menus/states in video games (where you go into 
 settings menu and afterwards it takes you back to the main menu, main menu being 
 the most recent menu). 
@@ -18,7 +18,7 @@ the most recent menu).
 If you have a scenario where you do not care about the ORDER in which data comes in,
 then look elsewhere.
 
-EX:
+HOW TO USE:
 public class Stack{
   Node top;
   public Stack(int data){

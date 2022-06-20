@@ -1,16 +1,19 @@
 Analogy: Think of a train with all of it's carts and chains linking them together.
 The head is the front of the train and tail is the back of the train.
 
-Linked Lists take advantage of the concept of a class containing a var of itself 
-within its class. This creates a chain of classes than contain a reference to 
-another instance of itself. We typically call these classes Nodes.
+Linked Lists take advantage of the concept of a class containing a variable
+of itself within its class. This creates a chain of classes than contain a 
+reference to another instance of itself. We typically call these classes Nodes.
 
-Sequential access instead of random access, that means that to access something
-you always must traverse through the list instead of directly refering to its location.
+WHEN TO USE:
+Insertion and Deletion of elements can be quicker than an array as you do not need
+to move over each element like in an array, but it is still generally O(n) unless
+you are modifying the ends of the list (O(c)).
+Linked Lists have sequential access instead of random access, that means that to 
+access something you always must traverse through the list instead of directly 
+refering to its location. (O(n))
  
-See Java Code below to get an idea of how it is done: 
-
-
+HOW TO USE:
 public class Node{
   int data;
   Node next;
