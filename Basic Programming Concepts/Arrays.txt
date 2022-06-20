@@ -1,0 +1,38 @@
+Arrays allow us to store several elements of the same data type under one name.
+
+WHY TO USE:
+Creating a single variable for a single data type can be really time consuming
+if you want to create many of that same data type. 
+
+You can very easily want 10 ints, and have to painstakingly create and set each
+one to the value that you want them. 
+
+Arrays allow us to have multiple values of the same type under one name,
+circumventing this issue and saving us time. It also allows us to access 
+and modify each element by their corresponding number, as each element of an 
+array is numbered.
+
+Combining this with looping statements (ie for and while loops) makes it easy
+to perform a certain action with each element within an array, saving us time 
+doing things one by one manually.
+
+HOW TO USE:
+To initialize an array:
+int[] myArray = new int[5]; //for when you want a clean slate but know the number of
+//elements you want
+
+int[] myArray = {1, 2, 3, 4, 5} //for when you know what elements your array needs
+
+To access and modify an element:
+myArray[0] = 1;
+
+SPECIAL NOTE: Keep in mind that arrays are either 0 indexed or 1 indexed. This
+means that the first element of an array starts official as either 0 or 1 
+respectively. 
+With 0 indexing, an array that has 5 elements are numbered as 0, 1, 2, 3, 4. 
+With 1 indexing, an array that has 5 elements are numbered as 1, 2, 3, 4, 5.
+Take note of this distinction since you may try to access a number 
+that technically doesn't exist, resulting in an ARRAYINDEXOUTOFBOUNDS error.
+
+
+ 
