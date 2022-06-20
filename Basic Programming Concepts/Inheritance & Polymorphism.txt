@@ -27,24 +27,24 @@ The base version of a method can be accessed by using the base keyword.
 (base.update()).
 
 
-Constructors are a bit different. Since a derived class is based on another 
-class, as we're creating a subclass's constructor, we will also 
+Constructors are a bit different. When we are creating a constructor for
+a class who inherits from a parent class, we will also 
 need to choose a constructor to use from the superclass.
 This is done with colon base then the parameters of whichever constructor from
 the base class that you want. 
-public Square(float size): base(4)
+public Square(float size): base(size)
 {
-    Size = size;
+    dimensions = size;
 }   
 
 Methods can be overridden if the parent class/child class share the same 
-name and arguments for the method. Overriding provides a new implementation 
-specified in the child class that ignores the implementation of the parent class' 
-version of that method. 
+name and arguments for the method (this is known as having the same signature). 
+Overriding provides a new implementation specified in the child class that ignores 
+the implementation of the parent class' version of that method. 
 The Parents class version must be labeled as virtual, abstract, or override
 to be able to override the method in a child class
 PARENT CLASS VERSION-
-public virutal void GetArea(int x, int y){
+public virtual void GetArea(int x, int y){
 }
 CHILD CLASS VERSION-
 public override void GetArea(int x, int y){
