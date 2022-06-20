@@ -22,6 +22,6 @@ Diagram, and Class Diagrams
 IN GENERAL, you use these diagrams in the following order to model and code a
 project 
 Use Case Description + Use Case Diagram : WHAT it does - classes & methods
-Sequence Diagram : WHEN it does - sequence of methods
+Sequence Diagram : WHEN it does the processes - sequence of methods
 Class Diagram : WHAT the classes look like - code of classes 
-Activity Diagram : HOW it does it - code of methods
+Activity Diagram : HOW the execution does it - code of methods
