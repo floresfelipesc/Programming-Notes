@@ -1,5 +1,5 @@
 O(N^2)
-Almost never fucking used.
+Almost never used.
 
 Find the minimum item in the unsorted  part of the array
 

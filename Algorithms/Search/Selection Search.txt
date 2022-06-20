@@ -1,1 +1,1 @@
-literally just use a for loop and search for the thing you want one by one lol
+Use a for loop and search for the thing you want one by one 
