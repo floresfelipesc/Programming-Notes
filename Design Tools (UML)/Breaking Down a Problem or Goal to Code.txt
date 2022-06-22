@@ -6,40 +6,54 @@ clearly to people who are not familiar with programming what my program does.
 Here is my general approach when wanting to code up a solution to a problem
 or with the express of achieving a goal.
 
-The way you work towards these issues is that first you define and understand the 
-problem(define the end), then you see where you are at and what you currently have
-(define the beginning), and then working towards the end from the beginning (filling
-in the blanks). The knowledge of coding languages comes in as being a toolbox
-on what actions you can take to build a bridge between the beginning and the end.
+Keep in mind that the knowledge of coding languages comes in as being a toolbox
+on what actions you can take to build a bridge between the beginning of a process
+to the end.
 
-If you are artistic, think of this as first defining the keyframes of a scene
-in animation, and then drawing the in-betweens. 
+SO now keeping this in mind here's the low-down:
 
+  1. First state the problem/goal using pure English. What do you even want your code
+to do? 
 
-SO now keeping this in mind here's the low-down
-1. First state the problem/goal using pure English. 
+  2. Now we must start detailing and modeling the behavior of our code. We come
+up with every KEY scenario that our code will take care of, and detail what steps
+our code will do to take care of each scenario from beginning 
+to their corresponding end results. You can use drawings, text descriptions, or 
+both!(The above falls in line with UML Descriptions). Doing this early
+allows us to code while keeping these scenarios in mind so that we may avoid
+running into future problems (you can also use these scenarios for Unit Tests)
+NOTE: When I say KEY scenarios, I mean scenarios
+that may result in unintended results or errors if they are not accounted for
+in your code. Try to avoid coming up with scenarios that are solved with the
+same exact process you have previously detailed, those scenarios are redundant. 
 
-2. Then start to model the problem and it's steps through simple drawings and diagrams.
-Convey the steps by iterating on these drawings for clarity.
-Model any scenarios you can think of and model those steps too. 
+  3. Optionally use a UseCase Diagrams to model all these scenarios (I believe these
+are mostly used for quick communication about what your program does to others, 
+a great tool to be sure but less useful if the communication is not needed).
 
-3. Make UseCase Descriptions and UseCase Diagrams to model the scenarios into words.
+  4. Detail what will your classes be, what methods they will have, and in what order
+they will execute using the information you created in step 2. Some key points to
+note is that generally the nouns you used translate into being your classes, and
+the verbs you used translate into being your methods. After it's only a matter
+of detailing the order in which they perform things to see the flow of actions
+in you program!
+(What I described above is in line with making a Sequence Diagram)
 
-4. Make a Sequence Diagram assigning nouns to classes and verbs to methods, this
-is to see the flow of actions in your program.  
+  5. Double-check to see if what you have so far will work, checking if there are 
+any cases of input (or whatever) that would not be taken care of by the steps you made. Essentially
+Kind of like trial running.
 
-5. Check to see if it would work, checking if there are any cases of input 
-(or whatever) that would not be taken care of by the steps you made. Essentially
-Trial running.
+  6. Now model the classes, methods, and variables you will need with whatever 
+ways you see fit. I personally recommend using UML Class Diagrams as it allows for
+all this plus being able to model the relationships between classes 
+(Composition/Aggregation, Inheritance, and Dependancies).
 
-6. Using the flow charts:Model the classes, methods, variables and their relationships 
-with the UML Class Diagrams making note of Composition/Aggregation, Inheritance, and 
-Dependancies.
-General tips: Nouns into classes, verbs into methods. 
+  7. Make a programming flowchart for any methods you sit fit. (I believe this
+would be a UML Activity Diagram)
 
-7. Write the code. Thanks and have fun!
+  8. Write the code. Thanks and have fun!
 
-8. Refactor as needed. 
+  9. Refactor as needed. 
 
 
 
