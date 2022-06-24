@@ -1,0 +1,45 @@
+Test Driven Development is philosophy that dictates that you write your tests for
+validating your code's behavior and requirements BEFORE you start writing your
+code.
+
+WHY TO USE:
+The logic is that, in forcing yourself to write your tests first, you will have to 
+have a clear understanding of what behavior your code will exhibit and achieve. 
+
+This is incredibly useful as it helps you to keep your code "focused" and being
+able to handle all the scenarios you wanted it to handle. However, this only feasible
+when your requirements are well defined and not subject to change on a whim. If you
+have a situation like this, then you risk wasting extra time writing tests just to
+scrap the whole thing. Make sure to exercise this with this possibility in mind.
+
+
+This is a small footnote, but Test Driven Development is also very satisfying
+psychologically. It keeps you on the correct track, gives you a sense of progression,
+and makes you feel better about your code quality. It helps you to keep going and
+productive, which is a nice benefit.
+
+HOW TO USE:
+The general flow goes as follows: 
+1. You write your tests (that will fail at the beginning because you haven't actually 
+coded anything yet)
+
+2. You write your code ONLY up to the point of passing the tests. The emphasis on 
+ONLY is important. This is because if you can come up with code that can
+pass your test but it still does not exhibit the bahavior that you evisioned,
+then you will have to do step 3 to make a BETTER test. 
+Why is making a better test important? Making a better test will force you to more
+clearly define what behavior you want, which is beneficial for keeping your code
+clear and meaningful.
+It also helps for others to see what your code is supposed to do.
+
+3. Refactor your tests and code to make them match up more with the behavior you 
+want/make them more effecient. 
+
+Now, how to write your tests. This is mostly dependent on which Testing Framework
+you use that works for your language and IDE. Searching online for your process 
+is the key here, however I can tell you of keypoints that all of them seem to
+have in common in general terms.
+To create these tests you will: Use your own code of the feature
+you want to test, have a defined beginning of the test, and have a desired result. 
+The way you pass the test if your code can take in the beginning and successfully get
+to the desired result. 
