@@ -2,6 +2,7 @@ As the name suggests, "Unit Tests" test a small chunk of code with NO external
 dependencies. If external dependencies are needed to test, then you create mockups
 of those dependencies when testing. 
 
+WHY TO USE:
 The reasons for Unit Testing are two-fold. First, Unit Tests encourages good
 practice in keeping your code modular ie. each individual part must do one
 thing ONLY. (Do not make any monoliths where a single class takes care of 
@@ -10,3 +11,8 @@ every job).
 The second is that Unit Tests allow you to save you time by being able to show you
 whether or not your code works instantly (as opposed to manually running it and 
 looking at the results).
+
+HOW TO USE:
+This will vary depending on your IDE and language that you are using. For this
+part of the notes, I will be detailing the process in Microsoft Visual Studio using
+C#. TO BE CONTINUED.
