@@ -6,7 +6,8 @@ be able to handle. It helps to keep your code "focused".
 As a result, you will be able to catch any errors in your code
 early. Catching errors early saves on time trying to search for the error later.
 
-This is Test Driven Development. 
+This is Test Driven Development. (see more information on Test Driven Development
+section)
 
 There are 3 levels of tests in Test Driven Development: Unit Tests,
 Integration Tests, End to End Tests. These escalate in time required to make from 
