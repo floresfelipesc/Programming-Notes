@@ -15,6 +15,9 @@ in any other classes that you wish WITHOUT having to copy the whole section
 of code AGAIN in your current project. They also allow you to pick and choose 
 what you want to include in a fast convenient way.
 
+While not needed for small projects, in bigger projects they are a must, and generally
+good practice.
+
 HOW TO USE:
 To create a namespace it goes as follows:
 namespace MathLibrary{
@@ -32,9 +35,18 @@ public class MyProgram{
 note: The inclusion of a namespace is done with the "using" keyword, and
 is typically done at the beginning of your program.
 
-IMPORTANT NOTE for C# IN MICROSOFT VISUAL STUDIO: It seems that by default, 
+
+IMPORTANT NOTES for C# IN MICROSOFT VISUAL STUDIO: 
+
+It seems that by default, 
 whenever you create a new class, that class is set to be included within a 
-namespace with the syntax above.  
+namespace with the syntax above WITH THE SAME NAME you set your project as.
+To properly organize namespaces, you must create new folders or new projects
+within the overall SOLUTION. When you do this, their namespace will have to reflect
+their path name within the folder relative to the their project name as the root EX:
+namespace RootProjectName.SubFolder{
+}
+
 If you are confused as to why sometimes your program does not recognize a class
 you made within another class despite the both of them being labeled as public,
 namespaces are the reason why. Namespaces also make it so that those classes
