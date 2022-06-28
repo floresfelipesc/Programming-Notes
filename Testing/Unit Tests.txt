@@ -15,4 +15,14 @@ looking at the results).
 HOW TO USE:
 This will vary depending on your IDE and language that you are using. For this
 part of the notes, I will be detailing the process in Microsoft Visual Studio using
-C#. TO BE CONTINUED.
+C#. 
+
+To add a Unit Test to your project, right click on your solution, add item,
+and add another project. Now search for a Unit Test template. You have now added 
+a Unit Test to your project!
+
+Make sure the Unit Test has access to all the code you want to test (you may have to 
+sort out it's dependencies so that the Unit Test is explicitly dependent on your
+main code). Import the namespace of the classes you want to test with the "using
+keyword" (see namespaces section for more info), and use the Assertion class to 
+test whatever inputs and results you see fit.
