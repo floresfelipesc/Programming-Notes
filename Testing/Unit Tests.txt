@@ -24,5 +24,38 @@ a Unit Test to your project!
 Make sure the Unit Test has access to all the code you want to test (you may have to 
 sort out it's dependencies so that the Unit Test is explicitly dependent on your
 main code). Import the namespace of the classes you want to test with the "using
-keyword" (see namespaces section for more info), and use the Assertion class to 
-test whatever inputs and results you see fit.
+keyword" (see namespaces section for more info).
+
+Now HOW TO WRITE your Unit Tests.
+Typically you will follow this pattern when writing Unit Tests.
+  1. Initialize your objects, the expected value, and input data that will be 
+passed to the method you want to test
+
+  2. Using the method you want to test within the test itself.
+
+  3. Collecting the result you received from enacting the method and ASSERTING that
+it was the result you expected.
+
+EX:
+[TestMethod]
+public void MethodName_Scenario_ReturnsCertainValue(){
+//intialize objects, expected value, and input data
+
+//use the method you want to test
+
+//assert the expected value with the actual value you received         
+}
+Your Unit Tests are methods themselves, and as such should be named in a way that 
+conveys the method you want to test, the use case scenario, and the expected 
+behavior separated by underscores (see above example again).
+
+Keep in mind that when making your Unit Tests, try to avoid conditional and looping
+statements as this introduces even more logic into your code that may go wrong 
+(you wouldn't want to make Unit Tests for your Unit Tests do you?).
+
+
+Now what should you make the tests about? 
+In personal opinion, you should have one test to cover the most common and expected 
+case, with the other tests covering being edge cases (special scenarios that needs 
+explicit handling to avoid an error). If you encounter a bug, make a Unit Test to cover
+that bug before going to solve it!
