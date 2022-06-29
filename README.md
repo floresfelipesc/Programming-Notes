@@ -1,4 +1,4 @@
-# Programming-Notes by Felipe Flores (Online alias: SmoogMoog) 
+# Programming-Notes by Felipe Flores 
  These are my notes that I create for myself. The purpose of sharing these notes 
 is to teach others who may struggle with the concepts included in this repository.
 
