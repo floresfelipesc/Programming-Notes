@@ -59,3 +59,10 @@ In personal opinion, you should have one test to cover the most common and expec
 case, with the other tests covering being edge cases (special scenarios that needs 
 explicit handling to avoid an error). If you encounter a bug, make a Unit Test to cover
 that bug before going to solve it!
+
+SPECIAL NOTE: Remember that because your test is a method, you can technically assign
+a return value other than void. However in my experience, Visual Studio
+will not recognize your method as part of a UnitTest if it has any return value other
+void. For this reason, you should keep the return type for the methods composing your
+Unit Tests as void. I'm not sure if there is a situation where you can or should
+modify the return type to something other than void.
