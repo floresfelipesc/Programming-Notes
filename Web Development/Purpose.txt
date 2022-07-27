@@ -1,0 +1,4 @@
+This section is an outlier to all the others, as it will not involve Java nor C#.
+
+Despite that I still thought that it was worth including as web development
+is a huge part of the internet.

@@ -1,0 +1,62 @@
+WHAT are websites? 
+All websites are essentially a collection of files stored on a server connected to
+the internet. 
+You use a web browser (Chrome, FireFox, Safari) in order access that website online. 
+The web browser is commonly referred to as "the client".
+
+In brief summary, everytime you are accessing a website, the client is receiving
+data about the website from the server as well as the server receiving data from the
+client in a loop of sorts. 
+
+
+WHAT is Front-End, Back-End, Full Stack?
+These are essentially the 3 main roles to which web developers fall on what part 
+of the client-server relationship they work on. 
+
+Front-End is all about dealing with the client (basically everything that you can
+see in your web browser). 
+
+Back-End is all about the logic and functionality BEHIND the client (everything you
+can not see).
+
+Full Stack is dealing with both the Front-End and Back-End all by yourself.
+
+
+
+HOW do you Front-End?
+For Front-End, you will be using HTML, CSS, and JavaScript.
+HTML is the very base of every website, allowing you to get text and images on
+the client. However, that's all about it can do.
+
+CSS is what we use to format the text and images that HTML enabled us to do,
+allowing us to stylize things. 
+
+JavaScript is all about handling input from the user.
+
+WHAT are package managers? 
+They are online collection of software that allows you to use helpful tools 
+that others have written within your own projects.
+NPM.js and Yarn are very popular.
+
+Build Tools just allow you to run everything you need to run so that you won't have
+to run everything individually all by yourself. Gulp is pretty good for this.
+
+You may also want to use a JavaScript Framework to make things easier for you. 
+This is React.js
+
+
+
+How do you Back-End?
+For Back-End, you will need a server first. Traditional servers are needed for more 
+complex websites, but for simple sites we can use a serverless webserver provider like
+AWS (Amazon WebServices). 
+
+You will be using your more typical programming languages like
+C#, Java, Python and Node.js to control the functionality of the server.
+
+You will also need a DataBase that just stores all your information of the site.
+Most databases use SQL, where we can create, read, and update data.
+
+
+
+
