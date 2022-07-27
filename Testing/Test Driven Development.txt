@@ -25,7 +25,7 @@ coded anything yet)
 
 2. You write your code ONLY up to the point of passing the tests. The emphasis on 
 ONLY is important. This is because if you can come up with code that can
-pass your test but it still does not exhibit the bahavior that you evisioned,
+pass your test but it still does not exhibit the behavior that you evisioned,
 then you will have to do step 3 to make a BETTER test. 
 Why is making a better test important? Making a better test will force you to more
 clearly define what behavior you want, which is beneficial for keeping your code
