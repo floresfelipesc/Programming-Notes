@@ -57,6 +57,19 @@ C#, Java, Python and Node.js to control the functionality of the server.
 You will also need a DataBase that just stores all your information of the site.
 Most databases use SQL, where we can create, read, and update data.
 
+WHAT are API's? 
+API (Application Programming Interface) is another term you may hear. It is an
+optional piece, but mandatory if you would like to create a website that interacts
+or pulls data from other websites. 
+Think of the process of making a robot to make a car. If your program is the robot,
+the car interface is the API. It is an interface that others have written that allow
+you to access and read from their site using YOUR OWN PROGRAM. 
+This way, you don't need to know how these
+OTHER sites work, just their API. 
 
+As for where API fits in the whole picture, some consider it a middle-man
+between front and back end. Some others consider it mainly a backend function.
+I believe that it is just general assistance that does not fit exactly into a single
+place.
 
 
