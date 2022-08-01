@@ -42,7 +42,7 @@ Build Tools just allow you to run everything you need to run so that you won't h
 to run everything individually all by yourself. Gulp is pretty good for this.
 
 You may also want to use a JavaScript Framework to make things easier for you. 
-This is React.js
+React.js is one of them
 
 
 
