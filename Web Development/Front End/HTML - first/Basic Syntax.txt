@@ -1,0 +1,27 @@
+You will see a trend in HTML that <example> is used to mark the beginning of a
+section that is specified by the keyword used within the <>
+EX: <head>
+
+To mark the end of a section, you typically use the same notation as to mark the
+beginning of the section with the inclusion of a / sign 
+EX: </head>
+
+Every HTML file you will make must begin with:
+<!DOCTYPE html>
+This indicates that what you are making is an HTML file.
+
+After that, you want to indicate the beginning and ending of your html file with:
+<html>
+
+...your stuff...
+
+</html>
+
+Now you will put all your work between those html notations. 
+Some keywords that you will use are :
+<head> - marks the header of your web page
+<title> - marks the title of the web page (url)
+<body> - marks the container for all visible contents on the page itself 
+(headers, paragraphs, images, hyperlinks, tables, etc)
+<h1> - defines a large heading
+<p> - defines a paragraph
