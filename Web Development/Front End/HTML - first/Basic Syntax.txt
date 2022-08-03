@@ -1,14 +1,16 @@
-You will see a trend in HTML that <example> is used to mark the beginning of a
-section that is specified by the keyword used within the <>
-EX: <head>
+In HTML you will see the general trend of a section being defined by a 
+start tag (marks the beginning), some content, and then an end tag (marks the ending).
 
-To mark the end of a section, you typically use the same notation as to mark the
-beginning of the section with the inclusion of a / sign 
-EX: </head>
+These are called elements and generally look like something like this:
+  <tagname> Content </tagname> 
+Note that the end tag is the same keyword as the start tag with the only distinction
+being the / sign
 
-Every HTML file you will make must begin with:
+Now to get started in making your HTML file.
+Every HTML file you will make MUST begin with:
 <!DOCTYPE html>
 This indicates that what you are making is an HTML file.
+This element does not need to define an end tag
 
 After that, you want to indicate the beginning and ending of your html file with:
 <html>
@@ -17,11 +19,32 @@ After that, you want to indicate the beginning and ending of your html file with
 
 </html>
 
-Now you will put all your work between those html notations. 
-Some keywords that you will use are :
-<head> - marks the header of your web page
-<title> - marks the title of the web page (url)
-<body> - marks the container for all visible contents on the page itself 
-(headers, paragraphs, images, hyperlinks, tables, etc)
-<h1> - defines a large heading
-<p> - defines a paragraph
+
+Now you will put all your content between those html notations. The content
+itself will also be defined with their own tags. The end result will be
+elements nested within other elements. The tags you will be using are: 
+
+  <head> - marks the header of your web page
+  <title> - marks the title of the web page (url)
+  <body> - marks the container for all visible contents on the page itself 
+    (headers, paragraphs, images, hyperlinks, tables, etc)
+  <h1> - defines a large heading, there are further variations of this labeled one
+    through six. One being the biggest heading and 6 being the smallest heading.
+
+  <p> - defines a paragraph, essentially lines of text, keep in mind any formatting
+    done to its text such as spaces and going down a line is ignored 
+  <pre> - defines a paragraph but does reflect the formatting done to its text 
+    such as spaces and going down one line.
+
+  <br> - for line breaks (going down one line), does not require an ending tag
+  <hr> - creates horizontal lines in its place, does not require an ending tag
+
+The following keywords also often use additional attributes to provide additional
+information for HTML to use. They are always encapsulated between the <> and
+after the keyword used to mark the beginning of a section. The values you assign
+to these attributes should always be surrounded by quotes.
+  <a> - defines a hyperlink like below:
+    <a href = "https://insertlinkhere.com/">text that will be hyperlink</a>
+    href is attribute to define the link itself
+  <img> - defines images
+    <img src="yourimage.jpg" alt="yoursite.com" width="104" height="142">
