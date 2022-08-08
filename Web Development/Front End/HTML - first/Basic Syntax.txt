@@ -48,3 +48,7 @@ to these attributes should always be surrounded by quotes.
     href is attribute to define the link itself
   <img> - defines images
     <img src="yourimage.jpg" alt="yoursite.com" width="104" height="142">
+
+Some attributes allow you to further specify what you want adjusted. 
+When it comes to styles, the syntax for that is as follows:
+<tagname style="property:value;">
