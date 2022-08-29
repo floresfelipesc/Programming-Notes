@@ -1,0 +1,32 @@
+Activity Diagrams allow you to model the steps of execution involved in your code
+visually using modeling tools that is similar to a flowchart.
+
+WHY TO USE:
+Personally I have found activitiy diagrams to be a great way to visualize the
+execution of code, as it aids with seeing all possible branches of execution. 
+
+It is also quicker and easier to look at a model and make a change, rather than sifting
+through lines of code trying to see what's wrong. It is also a quick communication
+tool that you can use to show others what your code does.
+
+When used properly, it is a time saver.
+
+HOW TO USE:
+
+Ovals indicate the beginning and ending of our execution. 
+
+Parallelograms signify input taken in or output being put out.
+
+Rectangles represent a regular step that must be executed. 
+
+Diamonds represent conditional logic of which there will be two splitting paths marked
+as true or false. (if statements)
+
+Hexagons represent a condition that will result in two splitting paths marked true
+or false in which one path results looping some behavior while the other path breaks
+the loop. (for or while loops)
+
+Using all of these tools you can model your code first before heading into your IDE 
+of choice.
+
+ 

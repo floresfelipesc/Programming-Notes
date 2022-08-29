@@ -1,0 +1,58 @@
+The beauty of programming is that there are many ways to solve the same problem.
+However, there are some schools of thought that are typically followed when
+producing quality code. 
+Knowing their advantages and disadvantages will prepare you to tackle all sorts
+of problems with the best tool. 
+
+
+First, what constitutes as good code? Good code generally exhibit these attributes: 
+  1. Is it understandable to others (easy to read)?
+  2. Is it easy to modify?
+  3. Is it re-usable?
+  4. Is it efficient?
+
+The fourth point is covered in other topics (Time Complexity).
+Knowing about OOP vs Functional vs Procedural mindsets assist you in covering the
+first 3 points.  
+
+1. Procedural Programming
+  This is the simplest of the 3. It is the process of simply stating the steps
+  that need to happen for the problem to be solved. Once you have figured out the
+  steps required, you can create code based off of them.
+ 
+  To an extent, you do this with every problem when you code. The difference here
+  is that you do not rely on functions or features that are OOP. This makes 
+  Procedural Programming rigid and inflexible. 
+  
+  Best used for simple problems.
+
+2. Object Oriented Programming
+  This is the process of viewing programming as a collection of actions taken by 
+  multiple entities to result in a desired outcome. You put a heavy emphasis on 
+  WHO can do WHAT, and organize features into classes/methods based on that. 
+
+  You will still list the steps needed to solve a problem, but you will organize
+  your code with OOP features (typically by using the nouns you used within the
+  steps as your classes). 
+
+  
+
+3. Functional Programming
+  This is the process of viewing programming as a collection of actions. You put
+  a heavy emphasis of what steps need to be done to result in a desired outcome.
+  This line of thinking puts a heavy emphasis on functions, with them being
+  executed one after another. 
+
+  It also emphasizes "pure functions", which means that the output of your 
+  functions should ONLY depend on the input that your functions takes
+  (not any global variable). 
+  You should also not have any unrelated side-effects when making your functions.
+  This keeps your functions concise and easy to understand because it does
+  not rely on anything other than ITSELF to work.
+
+  Often times, a function will produce a result that is used as the input of 
+  the next function. You may also have to use a function within another function.
+
+Footnotes: Both OOP and Functional Programming have their advantages, ideally,
+you should code in a way that takes advantage of the best features of both while
+minimizing their downsides.
