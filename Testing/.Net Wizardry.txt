@@ -1,0 +1,16 @@
+Using Unit Tests in Microsoft Visual Studio partially stems from the type of
+.Net you decide to implement. 
+
+.Net is Microsofts solution to make software development of varying types 
+easier for individuals. This includes Desktop Apps, Web Apps, Video Games Dev (Unity),
+and Mobile apps. You can generally choose any language you want, but the one that 
+is best supported first and foremost is C#.
+
+There are 4 main players in the .Net family: 
+.NET Framework, .NET Core, .NET , and .NET Standard.
+Framework is the oldest, and is no longer getting updated, but is still supported.
+.NET Core goes up to a few versions, and is newer. 
+.NET is the continuation of .NET Core but with a different name
+.NET Standard seems to be temporary, but works across all .NETs. 
+
+I myself am still a little confused, but they all make developing things easier. 
