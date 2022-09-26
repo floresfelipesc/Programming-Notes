@@ -8,7 +8,8 @@ WHEN TO USE:
 Big(O) Log(N) for insertion, deletion, and accession (WHEN SORTED)
 Heaps are a nice way to take advantage of Log(N) time when the data you have is
 sorted. The data being sorted is ESSENTIAL for using a Heap, otherwise it will
-not function. 
+not function. Also, if your data requires to ALWAYS BE SORTED, then a heap is a good
+choice. 
 
 HOW TO USE:
 There are several ways to implement a heap. The mains ways are using an array, and 
