@@ -1,0 +1,34 @@
+Analogy: Think of a pyramid, where blocks closer to the bottom are bigger than the ones
+on top. Or an upside down pyramid (depending on the heap itself).
+
+A Heap is a subset of trees. It is a completed binary tree, with each node containing
+a piece of data. 
+
+WHEN TO USE:
+Big(O) Log(N) for insertion, deletion, and accession (WHEN SORTED)
+Heaps are a nice way to take advantage of Log(N) time when the data you have is
+sorted. The data being sorted is ESSENTIAL for using a Heap, otherwise it will
+not function. 
+
+HOW TO USE:
+There are several ways to implement a heap. The mains ways are using an array, and 
+using a priority queue.
+
+The array or priority queue needs to be sorted before using the data they
+contain to implement a heap. (You are essentially using a more basic data structure
+and tailoring it to have the behavior of a heap).
+
+If you use an array, you populate the heap (as a binary tree) with these formulas:
+  For each element at index i:
+    its left child is at i * 2
+    its right child is at (i * 2) + 1
+    its parent is at i / 2
+
+There are two typical forms of a Heap, Max Heap and Min Heap. A Max Heap guarantees
+that the parent of a node is always greater than the child(greater numbers on top). 
+Meanwhile a Min Heap guarantees that the parents of a node is always less than the 
+child(smaller numbers on top).
+
+You will hear two important terms when dealing with heaps: HeapSort and Heapify.
+HeapSort is when you want to RE-SORT all numbers in an existing heap.
+Heapify is when you want to CREATE a heap from an array.
