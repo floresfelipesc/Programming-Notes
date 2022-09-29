@@ -1,0 +1,64 @@
+ANALOGY: Think of a library and a librarian. You have a book in mind that you would
+like to access. Instead of manually going through each shelf trying to find the book,
+you ask the librarian where the book is. You give the title of the book (KEY), and the 
+librarian performs some operation on a computer (HASH FUNCTION).
+The location of the book is received and the librarian tells you exactly where the book 
+is located, bypassing the need for a long manual search (INDEX RECEIVED FROM HASH 
+FUNCTION).
+You then happily enjoy the contents of the book itself (VALUE).
+
+
+Hash Tables are a powerful data structure, that allows you to read and write data in 
+O(1) time complexity (as long as it is properly maintained). It can however be very
+space intensive.
+
+This works due to keys being assigned to values as an identification for said value 
+(key:value pairs). These keys are run through a hash function, that returns a numerical
+index for the data to be stored in. Then the data is stored in the appropriate spot 
+within an array chosen by the hash function. Then whenever you want the specific data,
+you feed the corresponding key to the hash function, and find the location of the data 
+to read from.
+
+Of course, this all requires a lot of maintainnce. Keys and Values can be tricky to
+assign from real world information, as both can be whatever value. Keys and Hash
+Functions need special care, as both need to work together to produce distinct 
+locations when fed distinct keys. 
+
+If there are several keys that are input into a hash function which then produce 
+the same locations, a collision of data happens. 
+This can be alleviated with :
+  Linear probing - look for a space available NEXT to wherever the data was 
+  supposed to be
+  Quadratic probing - use a quadratic formula to find another spot.
+  Separate Chaning - allow each element of the array to store multiple values by
+  making each element store a linked list. (Jagged 2 Dimensional array)
+  And more!
+ 
+Eventually, a hashtable can be so populated that even a collision is impossible to 
+work around. To calculate when this happens, LOAD FACTOR is taken into account.
+Load Factor is a ratio to tell us how full is a hashtable (num of elements / num of 
+total available spots). Once this Load Factor reaches a threshhold, it's better to 
+make a new array with more total spots and then repopulate it. This is called 
+Re-hashing. Because you need more available spots than you plan on actually populating
+in order to preserve the speed of a hashtable, a hashtable tends to require a lot of 
+space.
+
+
+WHEN TO USE: 
+HashTables are best used when you need to store data that you can very intuitively 
+label with a key, and when the data does not need to be stored or used
+in a particular order. They come with the drawbacks of requiring a lot of maintainance
+to preserve their fast time complexity, requiring a lot of space, and requiring 
+the order of the data itself not mattering.
+Other than that, HashTables are very versatile.
+
+
+HOW TO USE: 
+The key to using HashTables is largely identifying a good key:value pair.
+These are examples of what can be key:value pairs : 
+  word : number of times the word appears
+  book title : the words that make of the inside of the book
+  word in a dictionary : the word's definition
+  and more! Seeing these will come with practice.
+ 
+
