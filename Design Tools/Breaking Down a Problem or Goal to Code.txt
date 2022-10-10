@@ -1,7 +1,7 @@
 My goal with this is to note my workflow when it comes to programming a solution 
 to a problem or toward a goal. I wanted this process to not only to have better
-documentation of my work to my future self, but to also have a means of explaining
-clearly to people who are not familiar with programming what my program does. 
+documentation of my work, but to also have a means of clearly explaining to people 
+who are not familiar with programming what my program does. 
 
 Here is my general approach when wanting to code up a solution to a problem
 or with the express of achieving a goal.
@@ -11,49 +11,73 @@ on what actions you can take to build a bridge between the beginning of a proces
 to the end.
 
 SO now keeping this in mind here's the low-down:
-
+-------------------------------------------------------------------------------------
   1. First state the problem/goal using pure English. What do you even want your code
-to do? 
+to do? What is the input it takes, and what output does it produce?
+-------------------------------------------------------------------------------------
+  2. Now we must start modeling the behavior of our code. 
+ 
+Modeling the behavior of code forces us to walk through each step our code takes. 
+By forcing ourselves to walk through each step, we can have a more accurate 
+understanding of the behavior and not overlook any steps.
+But how do we model the behavior?
 
-  2. Now we must start detailing and modeling the behavior of our code. We come
-up with every KEY scenario that our code will take care of, and detail what steps
-our code will do to take care of each scenario from beginning 
-to their corresponding end results. You can use drawings, text descriptions, or 
-both!(The above falls in line with UML Descriptions). Doing this early
-allows us to code while keeping these scenarios in mind so that we may avoid
-running into future problems (you can also use these scenarios for Unit Tests)
+We model the behavior of code by modeling each step our code will take from an input
+to an output. You can use drawings, text descriptions, or both! I typically use
+both together.
+(The above falls in line with UML Descriptions).
+
+It is also a good idea to come up with several cases with different inputs so that 
+we can make sure that our walkthrough of steps is valid for all situations. 
+You should come up with KEY scenarios whose inputs you believe will cause trouble 
+and force you to change your walkthrough of steps. 
+(You can also use these scenarios for Unit Tests)
+
 NOTE: When I say KEY scenarios, I mean scenarios
 that may result in unintended results or errors if they are not accounted for
 in your code. Try to avoid coming up with scenarios that are solved with the
 same exact process you have previously detailed, those scenarios are redundant. 
+-------------------------------------------------------------------------------------
+  3. Now that we have a guideline and model of the steps, we can
+start detailing what steps our code will take to solve the problem.
 
-  3. Optionally use a UseCase Diagrams to model all these scenarios (I believe these
+I like a top down approach when detailing steps.
+First keep the steps as general as possible without going into to many specifics. 
+Then take those steps, and break them down into further smaller steps.
+Keep creating smaller steps until you cannot go smaller.
+
+Then when you code, start coding the smallest steps you detailed, and use those 
+smaller steps to build the functionality of the more complex steps.
+
+What I described falls in line with Structure Charts, a popular method used by 
+engineers to break down problems.
+Look into Structure Charts, as I typically now use them to detail the steps I would
+take. Each step would represent a function, and you can even detail input + output of
+each function.
+-------------------------------------------------------------------------------------
+  4. Refactor as needed.
+-------------------------------------------------------------------------------------
+The above is all you really need and often what I use the most by far.
+
+These following steps are optional depending on what the situation calls for. 
+
+  5. Optionally use a UseCase Diagrams to model all these scenarios (I believe these
 are mostly used for quick communication about what your program does to others, 
 a great tool to be sure but less useful if the communication is not needed).
 
-  4. Detail what will your classes be, what methods they will have, and in what order
-they will execute using the information you created in step 2. Some key points to
-note is that generally the nouns you used translate into being your classes, and
-the verbs you used translate into being your methods. After it's only a matter
-of detailing the order in which they perform things to see the flow of actions
-in you program!
+  6. Detail what will your classes be, what methods they will have, and in what order
+they will execute. Some key points to note is that generally the nouns you used 
+translate into being your classes, and the verbs you used translate into being your 
+methods. 
 (What I described above is in line with making a Sequence Diagram)
 
-  5. Double-check to see if what you have so far will work, checking if there are 
-any cases of input (or whatever) that would not be taken care of by the steps you made. Essentially
-Kind of like trial running.
-
-  6. Now model the classes, methods, and variables you will need with whatever 
+  7. Now model the classes, methods, and variables you will need with whatever 
 ways you see fit. I personally recommend using UML Class Diagrams as it allows for
 all this plus being able to model the relationships between classes 
 (Composition/Aggregation, Inheritance, and Dependancies).
 
-  7. Make a programming flowchart for any methods you sit fit. (I believe this
-would be a UML Activity Diagram)
+  
 
-  8. Write the code. Thanks and have fun!
-
-  9. Refactor as needed. 
 
 
 
