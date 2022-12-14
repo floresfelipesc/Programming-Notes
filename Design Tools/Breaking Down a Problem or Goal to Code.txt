@@ -1,6 +1,6 @@
 My goal with this is to note my workflow when it comes to programming a solution 
 to a problem or toward a goal. I wanted this process to not only to have better
-documentation of my work, but to also have a means of clearly explaining to people 
+documentation of my work, but also as a means of clearly explaining to people 
 who are not familiar with programming what my program does. 
 
 Here is my general approach when wanting to code up a solution to a problem
@@ -12,69 +12,110 @@ to the end.
 
 SO now keeping this in mind here's the low-down:
 -------------------------------------------------------------------------------------
-  1. First state the problem/goal using pure English. What do you even want your code
+  1. First state the problem/goal using pure English. What do you even want your program
 to do? What is the input it takes, and what output does it produce?
+Is it worth the investment the time needed to solve this problem? 
+
+If you are practicing your skills, or working under the employment of someone, this 
+step will often be already done for you. Somebody gives you a problem they have 
+identified, and now it is your job to solve it. If you do not need to do this step,
+then skip ahead. 
+
+However, if you are working or identifying things on your own, these are important
+questions to ask yourself before getting started. Sometimes there may already
+be a solution out there.
+
+I heavily discourage blindly copying someone else's answer,
+but seeing how other people approach the problem may give helpful insight into how you
+may tackle it on your own. Perhaps you can improve upon the solution you found.
+Or perhaps the solution you found will suffice. 
+
+However, NEVER blindly copy/paste code without knowing what the code actually does 
+or giving credit (plagerism does not only apply in literature). 
+
 -------------------------------------------------------------------------------------
-  2. Now we must start modeling the behavior of our code. 
+  2. Understand the problem.
+
+You will hear this statement everywhere from everyone, but the complexity of this step 
+is understated by the simplicity of this statement. "OF COURSE you need to understand 
+the problem before you can solve it, I wasn't born yesterday", I hear you say. Believe
+me when I say that this step is the most important one of them all.
+
+To understand the problem means to understand what inputs need to be handled,
+what steps need to be taken to get to an output, and what outputs will be produced.
+
+You should model various inputs and the steps that your program will do to create
+their outputs. Do this through drawings, writing steps down in english, anyway you
+see fit. Make note of any common patterns you see across all the sets of steps
+you write for various inputs. 
+
+Once you gain an understanding of the problem, the answer should become clear, but
+what if you are still stuck? 
+Then the following tactics should prove to be effective, as they are what personally 
+helps me get unstuck on problems. 
+
+TACTICS TO GET UNSTUCK ON UNDERSTANDING THE PROBLEM: 
+A. Think of the simplest possible inputs that the problem can take
+in, and what are the steps that lead to its output? 
+This allows you to think of the simplest steps needed to solve the problem, and 
+lets you work your way up to more complex inputs. This also has an added benefit 
+of catching edge cases early.
+
+B. Create a simpler version of the current problem and try to solve that.
+This lets you break up the problem by excluding the more complicated parts.
+Once you solve the simpler version, you can pinpoint differences between the simpler
+and original versions. Then you can use your solution for the simpler version and 
+modify it to handle the original problem. 
+
+I often use these two approaches as a starting point for problem solving. Keep in mind
+these are not mutually exclusive, you can choose to use only one, or you can even
+choose to use both.
+
+SideNote: Modeling all your inputs and respective outputs now also allows you 
+to write Unit Tests (Test Driven Development) later. 
  
-Modeling the behavior of code forces us to walk through each step our code takes. 
-By forcing ourselves to walk through each step, we can have a more accurate 
-understanding of the behavior and not overlook any steps.
-But how do we model the behavior?
-
-We model the behavior of code by modeling each step our code will take from an input
-to an output. You can use drawings, text descriptions, or both! I typically use
-both together.
-(The above falls in line with UML Descriptions).
-
-It is also a good idea to come up with several cases with different inputs so that 
-we can make sure that our walkthrough of steps is valid for all situations. 
-You should come up with KEY scenarios whose inputs you believe will cause trouble 
-and force you to change your walkthrough of steps. 
-(You can also use these scenarios for Unit Tests)
-
-NOTE: When I say KEY scenarios, I mean scenarios
-that may result in unintended results or errors if they are not accounted for
-in your code. Try to avoid coming up with scenarios that are solved with the
-same exact process you have previously detailed, those scenarios are redundant. 
 -------------------------------------------------------------------------------------
-  3. Now that we have a guideline and model of the steps, we can
-start detailing what steps our code will take to solve the problem.
+  3. Code the solution
+With the previous step done, this step should be trivial, as it is just coding all
+the common steps you have modeled. Use your knowledge of your programming language
+to put your plan into action. 
 
-I like a top down approach when detailing steps.
-First keep the steps as general as possible without going into to many specifics. 
-Then take those steps, and break them down into further smaller steps.
-Keep creating smaller steps until you cannot go smaller.
+You the previous tactics should at least allow you to arrive at a brute force solution
 
-Then when you code, start coding the smallest steps you detailed, and use those 
-smaller steps to build the functionality of the more complex steps.
 
-What I described falls in line with Structure Charts, a popular method used by 
-engineers to break down problems.
-Look into Structure Charts, as I typically now use them to detail the steps I would
-take. Each step would represent a function, and you can even detail input + output of
-each function.
 -------------------------------------------------------------------------------------
-  4. Refactor as needed.
+  4. Use your knowledge of time complexities and space complexities to guide any
+refactoring. 
+
+Look at your current solution and identify its time complexity and space complexity 
+among this scale:
+O(1)
+O(logn)
+O(n)
+O(n logn)
+O(n^2)
+O(2^n)
+
+Is there any room for improvement in your solution? Is it possible to reach a better
+solution using an algorithm or external data structure? 
+
+You will have to identify this and make any improvements possible using your current
+solution as a base. 
+
+
 -------------------------------------------------------------------------------------
-The above is all you really need and often what I use the most by far.
+Addendum: These new steps were formulated by me through trials and tribulation of
+grinding away questions on sites such as LeetCode. I realize now that my previous 
+explanation was trying to include too many topics outside of what was really 
+necessary.
+In short, my emphasizing UML Diagrams and other Objected Oriented Topics detracted
+from the fundementals of problem solving. Those other topics and modeling methods
+are important too, but should come later after you are able to form a basic 
+solution so that the solution is improved in its ability to be understood.
+The only exception being TDD (Test Driven Development) and Unit Tests, as 
+that methodology is useful even in the early stages of problem solving.  
 
-These following steps are optional depending on what the situation calls for. 
 
-  5. Optionally use a UseCase Diagrams to model all these scenarios (I believe these
-are mostly used for quick communication about what your program does to others, 
-a great tool to be sure but less useful if the communication is not needed).
-
-  6. Detail what will your classes be, what methods they will have, and in what order
-they will execute. Some key points to note is that generally the nouns you used 
-translate into being your classes, and the verbs you used translate into being your 
-methods. 
-(What I described above is in line with making a Sequence Diagram)
-
-  7. Now model the classes, methods, and variables you will need with whatever 
-ways you see fit. I personally recommend using UML Class Diagrams as it allows for
-all this plus being able to model the relationships between classes 
-(Composition/Aggregation, Inheritance, and Dependancies).
 
   
 
