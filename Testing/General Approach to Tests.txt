@@ -20,4 +20,4 @@ been doing this for a long time now. One of my first actions when breaking down
 a problem is to come up with several different key inputs and then writing down 
 the expected output. I then come up with steps to solve the problem while
 keeping in mind that the steps must account for the various inputs 
-and output the according results.
+and output to the according results.

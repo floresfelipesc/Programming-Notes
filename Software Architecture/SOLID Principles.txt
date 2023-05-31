@@ -1,0 +1,29 @@
+
+FOCUS*Single Responsibility Principle - Every class should have a minimal responsibility,
+and it is that one responsibility that elicits modifications to the class
+(Generally one method)
+
+Open/closed principle - each class should be open for extension but closed for 
+modification (anti switch statements, use classes and interfaces liberally).
+Whenever you want to add code, make sure you can do it by creating and classes
+and using interfaces as opposed to modifying existing classes/interfaces
+
+Liskov Substitution Principle- Each instance should be able to be swapped with
+a subtype, and your code should still work (utilitze all inherited behaviors, and 
+do not have any uneccessary inherited behaviors). 
+
+FOCUS*Interface Segregation Principle- Specific Interfaces are better than general 
+interfaces any interface should have only one method if it can be helped. You can 
+utilize several smaller interfaces to create your classes. 
+
+FOCUS*Dependency Inversion - High Level Classes should not depend on low level classes,
+instead both should depend on abstractions (ex. Interfaces, abstract classes)
+Abstract classes can be used to selectively pass on certain data or methods to all
+children if you find something too repetitive. 
+
+General tips: Use Classes and Interfaces liberally, do not think of them only
+as nouns. Break them up until each of them only are in charge of one thing, then use
+interfaces to compose the bigger complex data and procedures
+
+Getting, setting, and creating are separate responsibilities. 
+Do not be afraid to break down, get used to making many many classes and interfaces.

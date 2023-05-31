@@ -1,0 +1,25 @@
+Dependency Injection and depency inversion principle simply state that instead of
+the high level functions being dependent on the lower level functions, the lower level
+functions should depend on the abstractions by implementation and
+the high level functions should depend on abstraction by injecting the interface type
+through a constructor or method parameter
+ (ex interfaces).
+This achives the ultimate goal of reducing dependencies and making code flexible.
+
+ClassA ----> ClassB X
+
+ClassA
+  |
+has a 
+  |
+Interface <----Class B YES
+
+You create variable with type Interface in Class A, then through constructor or methods,
+pass in the specific class that implements the interface, thus decoupling the depency.
+This is possible through polymorphism, which allows subclasses to be treated as
+the superclass while being able to enact different behaviors with the same 
+method signatures.
+
+You can make this even more flexible by having a service container take care of 
+instantiating the instance of the lower level class for the higher level class to 
+use. How this is done? I'm not sure (PENDING)

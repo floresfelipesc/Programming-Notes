@@ -34,5 +34,3 @@ With 1 indexing, an array that has 5 elements are numbered as 1, 2, 3, 4, 5.
 Take note of this distinction since you may try to access a number 
 that technically doesn't exist, resulting in an ARRAYINDEXOUTOFBOUNDS error.
 
-
- 

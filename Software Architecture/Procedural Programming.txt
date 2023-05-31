@@ -1,0 +1,44 @@
+Procedural Programming is everywhere, as this paradigm simply states that if you
+are writing a list of steps to execute, you are writing procedural programming.
+
+However, not one paradigm is "pure" in a sense, they are all general ideas/guidelines
+to keep in mind while making your applications. You should take advantage of all the
+benefits each of them give respectively depending on the scenario you are facing,
+and not be hesitant to discard the rest if you do not currently need it. Identify
+the right tools for the right jobs.
+
+That being said, at a very base level, programs are just a list of steps.
+However, procedural programming done in it's purest form is verbose and overwhelming
+to see everything in one place, so we borrow concepts from other paradigms to make
+it appealing. 
+
+DATA, LOGIC, and STATE should all be separate into their own files outside of the
+MAIN program. 
+
+Groups of DATA should be structs, in which you initialize in the main program 
+at the beginning to your liking. Or within the module they are used the most 
+(any various state modules or in main). They should also stand on their own
+
+LOGIC should be a group of functions in a file (or uninstantiable static class if the
+language does not allow for it) that deal with pure logic. These files do not store
+or change any state externally (variables), they ONLY contain functions. 
+These functions should always take in an input, and return an output. The functions
+can only change or calculate something with the input they take, and cannot reach out 
+outside for anything. This means that they cannot take in input or output, as that
+is spooky external state. These logic files should stand alone and
+NOT DEPEND ON ANYTHING.
+
+STATE deals with the input/output from/to user, reading data, and writing to your 
+database.
+State files can and often DEPEND ON LOGIC FILES.
+
+GENERAL GUIDELINES: 
+When in doubt of making a function, give it a parameter.
+
+Bundle globals into structs/records/classes
+
+Try to make functions pure as possible
+
+Encapsulate code into namespaces/packages/modules
+
+

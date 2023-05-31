@@ -1,0 +1,11 @@
+1. Right Click your main project that runs your program
+
+2. Publish
+
+3. Choose a location to save all files associated with your program (this includes all
+projects)
+
+4. You can now put all these files into a single file and distribute the Console App!
+
+(Remember that all files needs to be on the same level, or else the exe file will
+flash on screen and not run)
