@@ -13,6 +13,10 @@ HOW TO USE:
 inputs => expression
 (x,y) => x * y;
 
-The inputs are used within the expresion the same way as regular functions would.
+The inputs are used within the expression the same way as regular functions would.
 You do not need to specify the type that the input is, nor the output. 
-Both are inferred automatically depending on how you code it. 
+Both are inferred automatically depending on how you code it.
+
+Be wary that because the input types and output type are inferred, you may
+get an error if you provide incompatible data types to the operations you 
+do inside the function (ie multiplying two strings).
