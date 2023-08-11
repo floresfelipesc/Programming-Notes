@@ -1,0 +1,18 @@
+Lambda Expressions are used to create anonymous functions, which are functions with no
+name. The input type and return type of the anonymous function is 
+dependent on how you code it, you do not need to specify either. 
+
+In short, they can be used as a shorthand to create and pass functions into 
+other functions.
+
+WHY TO USE: 
+They are useful for as creating anonymous functions on the spot for input into other 
+functions as well as providing functions for a delegate to point to.
+
+HOW TO USE: 
+inputs => expression
+(x,y) => x * y;
+
+The inputs are used within the expresion the same way as regular functions would.
+You do not need to specify the type that the input is, nor the output. 
+Both are inferred automatically depending on how you code it. 
