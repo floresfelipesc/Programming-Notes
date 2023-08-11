@@ -1,0 +1,51 @@
+We know that programming is, for the most part, a list of instructions. 
+Typically in popular programming languages, your code gets excecuted line by line
+from top to bottom one at a time.
+
+WHY TO USE: 
+When utilizing asynchronous programming we get to execute portions of code
+simultaneously in parallel, which allows for faster execution times and allows the
+user to still interact with the program as a task can "run in the background". 
+You do not want the user to the program "lock up" when they execute something,
+asynch prevents locking up from happening.
+
+HOW TO USE:
+The important keywords are await, async, and type Task.
+
+The async keyword makes it so that the section of code will run simultaneously
+(they must return a variable of type Task when void or Task<int> when 
+you want to return a piece of data). All async methods must and will
+return TASKS. 
+
+Tasks represent aynchronous function calls. When "awaited" on, the code waits
+for the function to be done and returns the original data type of that function. 
+
+The await keyword makes it so that the section of code that 
+is runnning simultaneously will WAIT until the specific line is all done and ready
+before continuining.
+The Task type is to store and queue all your parallel executions. 
+
+The async and await keyword are used in tamdem to run certain opertations in parallel
+to speed up execution while waiting for parallel execution to complete before 
+continuing.
+If you do not use await, then the asynchro code will "fire and forget"
+immediately and move onto the next part of the code without waiting. 
+This can cause unintended results, so always wait on the asynch code 
+to prevent this.
+
+You can turn a piece of code into asynch by including the async keyword on the method
+signature plus wrapping the "big work" that needs to be done simultaneously with 
+Task.Run() and create a list of tasks. 
+Then you await on the list of tasks for them all to be 
+done at the same time. 
+Or you include the async keyword on the method plus await an async version of the 
+existing method. 
+
+A good way to execute operations in parallel is to initialize several function executions
+in a for loop using Task.Run on each of them and adding them to a list.
+Then take the list and use Task.WhenAll to await for all of them to be finished. 
+
+NOTE:
+When you decide to make something asynchronous, it will propagate throughout all your
+code, from the small methods to the MAIN method where you have to mark as 
+async as well. 
