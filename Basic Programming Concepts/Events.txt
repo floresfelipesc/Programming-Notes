@@ -1,0 +1,76 @@
+Events are a way for a single piece of code to notify many other pieces of code
+to respond with their own execution. The piece of code who alerts others is 
+called the "publisher", and the ones who respond to the signal are called the
+"subscribers".
+
+WHY TO USE: 
+This is typically used to "wire up" logic in the background to respond to
+user interaction (menus, mouse moving, mouse clicks). It Helps to decouple logic as 
+long as the subscribing does not take place in the same file as the planned 
+subscribers themselves. The publisher can fire off its signal, not caring about
+who is listening without errors, and you can wire up as many subscribers as you want
+to respond to that signal with neither of them knowing anything of each other.
+
+HOW TO USE:
+You can use Action\EventHandler\Func in order to initialize publishers IN WHICH WHO
+declare the parameters of the subscribers they will call to when invoked. 
+This means the generics/parameters used in publishers define the parameters of their
+subscribers. 
+Action is used to declare subscribers who takes in parameters you define
+and output nothing.
+EX: 
+public event Action<double> myPublisher; //initialize
+myPublisher?.Invoke(someDouble); //fire off signal, not caring about subscribers
+
+in another file...
+myPublisher += Method1; //the += operator is how you wire up a subscriber to publisher
+myPublisher += Method2;
+^
+|
+|
+public void Method1(double x){} //subscribers who do not know of the publisher
+public void Method2(double x){}
+
+
+Function can be used when you also want your subscribers to return a data type.
+This can be a bit weird though, as this is a one to many relationship, NOT a many
+to one relationship. Be wary when doing this. 
+
+public event Function<int, int> myFunction; //initialize
+int x = myFunction?.Invoke(5); //fire off signal, not caring about subscribers
+
+in another file...
+myFunction += Square; //the += operator is how you wire up a subscriber to publisher
+myFunction += Half;
+^
+|
+|
+public int Square(int x){} //subscribers who do not know of the publisher
+public int Half(int x){}
+
+
+EventHandler is used when you want the subscribers to have knowledge of the
+publisher through their parameters, other data can be included in the parameter as
+well. If you do not specify anything in their generics, the default parameters will 
+be (Object sender, Eventargs e). 
+Object sender is the publisher's data, Eventargs is the other data you'd like
+to include. 
+
+public event EventHandler<string> myEventHandler; //initialize
+myEventHandler?.Invoke(this, randomString); //fire off signal, not caring about subs
+
+myEventHandler += Method1; //the += operator is how you wire up a subscriber to publisher
+myEventHandler += Method2;
+^
+|
+|
+public Method1(Object sender, string s){} //subscribers who do not know of the publisher
+public Method2(Object sender, string s){} 
+
+-------------------------------------------------------------------------------
+*The publisher is often within a method of itself, so typically the paramaters of 
+the first method gets passed into the publisher which passes it to the subcribers.
+
+**Remember to either subscribe to an event once or if you must do that several times,
+unsubscribe from the event at some point. Do not accumulate subscriptions, this
+causes memory leaks.

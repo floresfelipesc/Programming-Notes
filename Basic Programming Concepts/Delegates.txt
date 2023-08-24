@@ -1,0 +1,58 @@
+Delegates:
+They act as pointers to methods, enabling the ability to pass in methods to
+other methods in the same way that you traditionally pass in data into methods.
+This allows you to execute code within a method that is in 
+a completely different location.
+
+WHY TO USE: 
+This is useful for whenever you need to pass a function into 
+another function. You can create a delegate type (method signature is specified) 
+and assign that delegate type as the input to a method. This allows you to pass
+in ANY method whose signature is the same as the delegate type (sort of like
+interfaces are used but this is for methods). De-coupling and code flexibility
+is gained this way by enabling you to call UI code within business logic
+code without either party knowing about each other. 
+
+This also allows for further flexability if you find that a method should
+have slight variations depending on deemed circumstances. Similarly to the
+flexability provided by interfaces in OOP.
+
+
+HOW TO USE:
+You instantiate them as if you were declaring an abstract method. 
+You use the delegate keyword, as well as including the traditional return type plus
+parameters. However, this time when you define those, you are actually specifying the
+method signature of the method that the delegate will contain (similar to interfaces).
+EX:
+public delegate int DelegateName(int x, int y);
+
+
+You can change the signature of a method to include either a delegate type you
+create or a Func. Then pass in ANY delegate/func who has the same signature.
+EX: 
+delegate void MyDelegate(); // create delegate type
+
+public static void MyMethod(MyDelegate method){ //input of method to delegate type
+//now any method of the same signature as your delegate type can be passed in and executed
+method();
+}
+
+in another file...
+public static void Print(){ //create logic for method you want to pass
+Console.WriteLine("A");
+}
+
+MyMethod(Print); //pass in created method into the other method
+
+Alternatively, use Func<input, output>. Using Func acts as a shortcut to 
+the process of initializing, and setting delegates.
+This allows you to set a method to the Func as long
+as it matches the Func variable's signature.
+This way skips having to create a delegate type.
+The Action keyword is the same as Func, except that Action is for 
+containing methods that return void (no data at all). 
+
+You can also use set a Lambda Expression to Func for an even faster alternative
+of creating a pointer to a function and a function itself.
+EX:
+Func<int,int, int> multiply = (x,y) => x * y;
