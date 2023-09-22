@@ -71,6 +71,6 @@ public Method2(Object sender, string s){}
 *The publisher is often within a method of itself, so typically the paramaters of 
 the first method gets passed into the publisher which passes it to the subcribers.
 
-**Remember to either subscribe to an event once or if you must do that several times,
-unsubscribe from the event at some point. Do not accumulate subscriptions, this
-causes memory leaks.
+**Remember to either subscribe to an event ONLY once or if you must do that several 
+times, unsubscribe from the event at some point. Do not accumulate subscriptions, 
+this causes memory leaks.
