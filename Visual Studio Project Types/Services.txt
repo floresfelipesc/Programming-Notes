@@ -1,0 +1,19 @@
+Services seem to be console applications that you do not have to run manually
+Sometimes they can be run on a schedule, other times it seems like they will even run
+while the device is turned off? 
+
+There is windows schedule tasker, but using a windows service seems to be overall more
+reliable
+
+It also seems that console apps can be made to be a service and visa versa,
+The caviat with services in that they do not have a console window, so you cannot
+ReadLine nor print anything out to console. 
+
+Services seems to be for automating tasks in which the input does not come directly
+from user interaction.
+
+In visual studio, services run a lot like console applications, with a gui.
+However when we install it and run it in the background (as services are meant to do
+) we will not see that at all since it runs in the background. If you want a GUI
+then you create a traditional application.
+ 

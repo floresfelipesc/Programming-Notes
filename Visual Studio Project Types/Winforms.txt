@@ -1,0 +1,69 @@
+By default, a winforms application comes with the inherit ability to 
+be resized, maximized, minimized, etc. 
+
+THE FILES:
+
+Program.cs:
+  This is where the main execution of the program happens. It utilizes an attribute
+  as well as static classes that initialize underlying functions and run the form
+  you compose. 
+
+Form1.cs:
+  This file has two main parts, the design (Form1.cs [Design]) and the code itself 
+  (Form1.cs). 
+
+  
+  We use the Form1.cs [Design] file to create the layout of our applications. 
+  We utilize a drag and drop system using the toolbox (View > toolbox) to
+  be able to access everything from buttons to textboxes.
+
+  We also use Properties (View > Properties) to rename the names of the boxes themselves
+  or change their default values. These properties are displayed to us in this menu
+  from the code itself, and the changes to these are reflected in the code.
+  You should always initialize these variables using the properties windows so that
+  it appears in the designer, you could do it in code but the change does not update
+  prior to running the application. 
+  You can also click the little lightning bolt to be able to assign different types of
+  events to various to different parts for the form. Click on the part of the form
+  you'd like to assign an event to, and then double click the event itself within
+  the properties tab. This will take you to Form1.cs, generate the event, and
+  allow you to add logic to the event created.
+  
+  We can double click any of the boxes on our form to be taken to the code part of
+  that part of the form.
+  Here is where Form1.cs is. This is the underlying code. Whenever you double click
+  on something, VS will automatically create an event method for the thing you double
+  clicked that allows you to wire functionality. There are many other possible
+  events you can create in code, but that is the default one assigned when you double
+  click something.
+
+  Note that this class is labeled as "partial". This means that the class code is split
+  between multiple files. This allows us to have the design and code together.
+  *This is also how the events are wired. The publisher and subscribers are in the  
+  same class, but through the partial keyword they are in different files.
+
+Form1Designer.cs:
+  Almost never modify this, you may have to fix some event wiring, so in that case
+  DO modify this.
+
+  This is the code behind the designer. When you drag and drop things, the code here
+  gets updated automatically. This code and data gets initialized and executed within
+  Program.cs
+
+  Behind the Scenes: The Form being displayed is an instance of a class that contains
+  other classes with their own values(buttons, lables, etc). The default Form1 gets
+  all functionality through inheritance with Form. Therefore you can have many instances
+  of the Window you create by making more instances of Form.
+
+
+
+BEST PRACTICES:
+Rename predefined things to things that make more sense
+Name things first immediately upon creation, this is because the variables in code
+are taken from the name you assign, and doing it later can cause some errors due to
+name conflictions. 
+
+Also take all your business logic (code NOT dealing with UI) and separate it into
+a class library full of static methods.
+Also DO NOT do data access in the UI for windows forms, put that in a class library
+as well.

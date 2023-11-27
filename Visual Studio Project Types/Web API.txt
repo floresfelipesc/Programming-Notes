@@ -1,0 +1,106 @@
+WHAT IT IS: 
+A Web API (Application Programming Interface) allows communication between your application
+to other applications. Interface is the keyword here, is it a user interface 
+(not a graphical user interface, a code interface) for your code to utilize other 
+applications within your application without having to know all the small intricacies of 
+the other applications. The interface
+API's dumb down their functions for simpler use for you. 
+
+
+This is how you can interact with sites on the web from your local
+application. 
+
+WHY TO USE: 
+This allows your applications to function as more than an isolated island on your local
+machine. Web API's allow you to interact with the outside world (websites) such as Youtube,
+Twitter, Reddit, etc. 
+You can even use several API's at once to have 2 different applications
+communicate with one another with your code as the middle man. 
+
+You can automate tasks based off of something occuring on a (alerting you of something), 
+request data from a site and utilize that data for some other purpose (webscraping), automate
+your emails, the possibilities are near endless.
+
+HOW TO USE: 
+Every API is different, with their own documentation on how to use them within your code as 
+well as restrictions (ex. number of requests you can make per hour). 
+There is a lot of overhead with utilizing API's. 
+To get started, generally you would search up the desired API, request a "key" which
+uniquely identifies you as YOU and gives you access to the desired API, then get to coding. 
+(Sidenote: a key is needed to be able to identify and ban bad actors who abuse API's).
+
+
+BIG PICTURE:
+There is generally still a lot of overhead in understanding things, but it is well worth it. 
+
+Typically the big picture of using an API looks like this: 
+
+CLIENT <-----> Internet <------>    Server
+(you)           (HTTP)          (ex. Youtube)
+
+
+You make a request using the API, the request is sent to the server via the Internet,
+the server receives and performs whatever the request is. This can be sending out data, 
+modifying existing data, or deleting data. 
+
+The requests are typically passed through the internet using HTTP 
+requests (HyperText Transfer Protocol). 
+These should be very familiar to you as you make HTTP requests whenever you access a website!
+
+Whenever you make a request to a server, there will be a status code in response to your
+request to let you know how it went. Here are the different types of status codes: 
+
+Within 200 Range - Success
+Within 400 Range - CLIENT ERROR (404 is the classic)
+Within 500 Range - SERVER ERROR
+
+The data that is passed to the server by the client (you)
+is typically in the format of XML or JSON files.
+
+They are typically sent through the body of the http request, from where the server will 
+read and extract the data accordingly. 
+JSON is typically prefered just because it is a little easier to look at with more
+simplicity.
+
+The client and server need to have an agreed upon way of sending and receivng requests
+so that they may understand one another. One way is by is to use REST 
+(Representational State). REST provides interoperability between the client and server.
+
+A REST call consists of an endpoint, method, header
+ENDPOINT is the location where a piece of data resides (often a URL).
+METHOD is what operation should be done on a piece of data (GET, POST, DELETE).
+HEADER defines the type of request, whether or not your data is formatted in XML or JSON.
+BODY contains your XML or JSON file. 
+REST basically just a set of rules for good practice, but do not need to be adhered to
+too strictly.
+
+The Controllers folder contains all the classes that define the commands that 
+you can send to the server. This is the CLIENT INTERFACE.
+**Remember that you should always separate business logic from interfaces, so put
+all your business logic non-related to the interface in a class library elsewhere.
+Here is where you can create your own commands.
+NOTE: The commands are Methods with an Attribute defining them as commands. It is in the
+Attribute declaration that you can give the command a specific name. There are conventions
+for this. These names you would use if you want to call these commands through the http in 
+your browser.
+
+Minimal API's do away with the whole Controllers folder, and just set you up with 
+the standard Program.cs file. By default it will have some code that defines action the 
+example command will make, and the example command creation. You can get rid of these as
+they are merely to show an example. Now instead you will create your commands in the 
+Program.cs file, and have the business logic for those commands elsewhere in a class library.
+An example of how this would look like is:
+
+app.MapGet("/nameOfMyCommand", Greeting);  |
+                                           |This is all in between two lines
+private static string Greeting(){          |app.UseHttpsRedirection();
+  return "Hello World";                    |app.Run();
+}                                          |
+
+When to use full API vs Minimal API?
+When the complexity of the API warrents a full API. Typically for individual projects 
+a Minimal API is fine, I would advice always trying to get away with using the 
+simpler Minimal API's for simplicity sake. 
+
+TODO:
+How to call on APIs in your projects? 
