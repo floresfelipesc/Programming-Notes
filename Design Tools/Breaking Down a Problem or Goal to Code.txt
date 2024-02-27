@@ -80,10 +80,10 @@ refactoring.
 Look at your current solution and identify its time complexity and space complexity 
 among this scale:
 O(1)
-O(logn)
-O(n)
-O(n logn)
-O(n^2)
+O(logn) - binary search
+O(n) - single for loop - hashtables- two pointers - sliding window 
+O(n logn) sorting
+O(n^2) double for loop
 O(2^n)
 
 Is there any room for improvement in your solution? Is it possible to reach a better

@@ -104,3 +104,15 @@ simpler Minimal API's for simplicity sake.
 
 TODO:
 How to call on APIs in your projects? 
+You will be bringing in the desired API through a class library, from there you will create
+functionality for the API to interact with your other projects.
+
+Within the class library, you will need to add a NuGet Package so that you can
+use System.Net.Http requests as well as JSON/XML so that visual studio can read
+those file types. 
+
+You will need to setup an HttpClient to order to communicate from your application
+with the API.
+EX: HttpClient client = new HttpClient();
+
+

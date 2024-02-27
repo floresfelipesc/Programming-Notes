@@ -1,4 +1,4 @@
-Divides what you have to search by half! O(N/2)
+Divides what you have to search by half! O(log N)
 
 Compare what you want with the element located in the middle
 of the array. 
