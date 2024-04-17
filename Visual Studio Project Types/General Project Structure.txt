@@ -1,0 +1,19 @@
+UI depends on Business Logic, Business Logic depends on DataBase
+Each CAN have variables as long as their methods are still maintained as PURE.
+
+MAIN:
+
+Initialize UI, inject Business Logic into UI. 
+UI Mainform = new Mainform(new Business Logic(new Database optionally));
+Application.Run(UI) or UI.Run() where the whole program top to bottom comes together
+and is executed.
+
+WindowsForm
+MainProgram
+UI
+
+Class Library
+Business Logic
+
+Class Library
+Database
