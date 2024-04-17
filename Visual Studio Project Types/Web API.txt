@@ -62,7 +62,7 @@ read and extract the data accordingly.
 JSON is typically prefered just because it is a little easier to look at with more
 simplicity.
 
-The client and server need to have an agreed upon way of sending and receivng requests
+The client and server need to have an agreed upon way of sending and receiving requests
 so that they may understand one another. One way is by is to use REST 
 (Representational State). REST provides interoperability between the client and server.
 
@@ -111,8 +111,38 @@ Within the class library, you will need to add a NuGet Package so that you can
 use System.Net.Http requests as well as JSON/XML so that visual studio can read
 those file types. 
 
-You will need to setup an HttpClient to order to communicate from your application
+1. You will need to setup an HttpClient to order to communicate from your application
 with the API.
 EX: HttpClient client = new HttpClient();
 
+2. Then you must initialize the client by defining its Header (What type of data 
+it will work with). 
+EX: client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
+3. Next is the EndPoint (Where is the data located). This is a URL.
+EX: 
+string url = "";
+url = "https://xkcd.com/info.0.json";
+
+4. Finally is the Method (What operation to perform on the data). 
+Typically you use the HttpResponseMessage to contain the response from the api,
+and you call a method from the api to initiate the operation. 
+EX: 
+//When you get a response you open a gateway to a site, wrapping the using
+//keyword around the operation ensures cleanup of the gateway
+using (HttpResponseMessage response = await API.ApiClient.GetAsync(url))
+{ 
+    //a response can be a succes or failure, prepare for both
+    //For Success
+    if (response.IsSuccessStatusCode)
+    {
+        ComicModel comic = await response.Content.ReadAsAsync<ComicModel>();
+        
+        return comic;
+    }
+    //For Failure
+    else
+    {
+        throw new Exception(response.ReasonPhrase);
+    }
+}

@@ -64,6 +64,6 @@ are taken from the name you assign, and doing it later can cause some errors due
 name conflictions. 
 
 Also take all your business logic (code NOT dealing with UI) and separate it into
-a class library full of static methods.
+a class library full of methods.
 Also DO NOT do data access in the UI for windows forms, put that in a class library
 as well.
