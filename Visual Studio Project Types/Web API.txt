@@ -128,14 +128,18 @@ url = "https://xkcd.com/info.0.json";
 Typically you use the HttpResponseMessage to contain the response from the api,
 and you call a method from the api to initiate the operation. 
 EX: 
+//First you open a gateway to the site in the form of a GET request
 //When you get a response you open a gateway to a site, wrapping the using
 //keyword around the operation ensures cleanup of the gateway
 using (HttpResponseMessage response = await API.ApiClient.GetAsync(url))
 { 
-    //a response can be a succes or failure, prepare for both
+    //a response can be a success or failure, prepare for both
     //For Success
     if (response.IsSuccessStatusCode)
     {
+        //Next you do whatever operation you want, in this case we read
+        //and convert the json data into our custom built ComicModel class
+        //where ReadAsAsync maps the json data to our Comic Model properties
         ComicModel comic = await response.Content.ReadAsAsync<ComicModel>();
         
         return comic;
@@ -146,3 +150,6 @@ using (HttpResponseMessage response = await API.ApiClient.GetAsync(url))
         throw new Exception(response.ReasonPhrase);
     }
 }
+
+Then the data is extracted from the url, and you can do what you want with it!
+Have fun!
