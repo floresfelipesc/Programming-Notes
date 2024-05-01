@@ -1,0 +1,42 @@
+Git & Github allows you to utilize version control, providing many different
+functionalities that help facilitate ease of sharing and updating projects 
+across many different developers. 
+
+Github is a website that handles repositoty, but underneath Github 
+utilizes Git for version control. 
+
+
+WHY IT IS USEFUL:
+
+Version control is useful to help share projects across multiple users and locations,
+allowing others to modify the projects, tracking changes, providing quality control
+to the changes themselves, all with the contingency that if something terrible
+were to happen you can always go back to a previous version.
+
+This essentially automates and organizes the manual work of saving various 
+different versions of a project across various folders, sending them to others,
+then those individuals making adjustments and reporting on those adjustments. 
+It streamlines the process and makes organization possible across many developers.
+
+HOW TO USE: 
+Before learning how to use it, we must first be familiar with the termanology that
+version control comes with.
+
+Origin - Refers to the centralized repository where you put your code. It is the main
+repository that others will download when they want to contribute to your project.
+
+Master - A clone of the origin repository that you store on your computer.
+
+Local Repository - Repository that you have stored on your computer LOCALLY.
+
+Push - Transfer files or changes from your local repository to the repository 
+on Github
+
+Pull - Copies updates from the repository on Github onto your local repository.
+
+Clone - Copies the repository on Github onto your local machine. 
+
+Branch - A separate copy of a repository where you can freely change
+without modifying the original. 
+
+Merge - Applying the updates you made to a branch into the original repository
