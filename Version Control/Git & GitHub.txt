@@ -29,6 +29,8 @@ Master - A clone of the origin repository that you store on your computer.
 
 Local Repository - Repository that you have stored on your computer LOCALLY.
 
+Commit - Logs a set of changes to files under a Title and description
+
 Push - Transfer files or changes from your local repository to the repository 
 on Github
 
