@@ -33,15 +33,25 @@ uniquely identifies you as YOU and gives you access to the desired API, then get
 BIG PICTURE:
 There is generally still a lot of overhead in understanding things, but it is well worth it. 
 
-Typically the big picture of using an API looks like this: 
+Typically the big picture of using an API looks like this, the same goes for most if not
+all apps. This is called the Client - Server Architecture.  
 
 CLIENT <-----> Internet <------>    Server
 (you)           (HTTP)          (ex. Youtube)
+(API Client)			(Backend of App)
+(API Interface)
+(FrontEnd of App)
 
+At base it always looks like this. Sometimes you will have different methods like
+simply importing a nuget package that contains libraries to take care of the
+the work for you. Sometimes it's as easy as getting a website link (Endpoint) into your
+project to get started. It varies.
 
-You make a request using the API, the request is sent to the server via the Internet,
-the server receives and performs whatever the request is. This can be sending out data, 
-modifying existing data, or deleting data. 
+First you setup the API client settings (Which endpoint, authentication)
+You make a request using the API client, the request is sent to the server via the Internet,
+the server receives and performs whatever the request is, a response is sent from the
+server to the client, and then you take care of the data you received (XML/Json files). 
+This can be sending out data, modifying existing data, or deleting data. 
 
 The requests are typically passed through the internet using HTTP 
 requests (HyperText Transfer Protocol). 
@@ -54,26 +64,50 @@ Within 200 Range - Success
 Within 400 Range - CLIENT ERROR (404 is the classic)
 Within 500 Range - SERVER ERROR
 
-The data that is passed to the server by the client (you)
-is typically in the format of XML or JSON files.
-
-They are typically sent through the body of the http request, from where the server will 
-read and extract the data accordingly. 
-JSON is typically prefered just because it is a little easier to look at with more
-simplicity.
-
-The client and server need to have an agreed upon way of sending and receiving requests
-so that they may understand one another. One way is by is to use REST 
-(Representational State). REST provides interoperability between the client and server.
-
 A REST call consists of an endpoint, method, header
-ENDPOINT is the location where a piece of data resides (often a URL).
+ENDPOINT is the location where a piece of data resides and also contains 
+the logic of how to respond to requests from the client (often a URL).
 METHOD is what operation should be done on a piece of data (GET, POST, DELETE).
 HEADER defines the type of request, whether or not your data is formatted in XML or JSON.
 BODY contains your XML or JSON file. 
 REST basically just a set of rules for good practice, but do not need to be adhered to
 too strictly.
+-----------------------------------------
+INVOICECLOUD TUTORIAL - 
+****The Need-to-know version is that you need the following: 
+ENDPOINT is the location where the server resides. It contains data and has 
+the logic of how to respond to requests from the client (often a URL).
+Depending on the Endpoint, it will also determine which data from the server
+you will be using your HTTP Requests on
 
+EX: http://vidly.com/api/customers/1
+Here if you send a HTTP GET Request to this endpoint, you would receive a customer
+from the list of customers
+
+AUTHENTICATION is what you need to use the client. Sometimes it will be a key or token,
+you may need to register for the website and request one depending on how
+things are done with their API.
+
+CLIENT is the tool that the API provides in order for you to communicate
+with the server. It sends requests to the endpoint. In your application,
+you need to initialize Client with the desired EndPoint and Authentication.
+You can also modify the Client's options here as well. Then you execute the requests
+using the Client
+
+REQUESTS are what you feed into the client for it to know what to requests from the API.
+The most typical requests are GET, POST, PUT, DELETE.  
+
+RESPONSE is what is sent back from the server in response to your request. It 
+can be succesful or fail (account for both scenarios), and if successful then the
+response contains data for you. You now have to process the data into a usable form
+for your own purposes. The data will be in XML or JSON format.
+
+DATA PARSING METHOD is what you need in order to restructure the data into a usable form
+that the. You need to transform the Json/Xml file into something
+easy to work with. This often comes in the form of an external library for you to use
+or creating your own data models to contain the Json/XML file data.
+
+-------------------------------------------
 The Controllers folder contains all the classes that define the commands that 
 you can send to the server. This is the CLIENT INTERFACE.
 **Remember that you should always separate business logic from interfaces, so put
@@ -83,7 +117,8 @@ NOTE: The commands are Methods with an Attribute defining them as commands. It i
 Attribute declaration that you can give the command a specific name. There are conventions
 for this. These names you would use if you want to call these commands through the http in 
 your browser.
-
+----------------------------------------------------------------------------------------------
+OPTIONAL
 Minimal API's do away with the whole Controllers folder, and just set you up with 
 the standard Program.cs file. By default it will have some code that defines action the 
 example command will make, and the example command creation. You can get rid of these as
@@ -101,45 +136,41 @@ When to use full API vs Minimal API?
 When the complexity of the API warrents a full API. Typically for individual projects 
 a Minimal API is fine, I would advice always trying to get away with using the 
 simpler Minimal API's for simplicity sake. 
-
-TODO:
+-------------------------------------------------------------------------------------------
 How to call on APIs in your projects? 
-You will be bringing in the desired API through a class library, from there you will create
-functionality for the API to interact with your other projects.
+The main take aways is that you need an Endpoint URL, Authorization, Client, Request, Response, 
+and Data Parser for API communication. 
 
-Within the class library, you will need to add a NuGet Package so that you can
-use System.Net.Http requests as well as JSON/XML so that visual studio can read
-those file types. 
+You will need some NuGet Packages to process the Client, this can be up to you.
 
 1. You will need to setup an HttpClient to order to communicate from your application
-with the API.
-EX: HttpClient client = new HttpClient();
+with the API. This also means setting up the Client's options, including the authorization
+and what endpoint to use
 
-2. Then you must initialize the client by defining its Header (What type of data 
-it will work with). 
-EX: client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-3. Next is the EndPoint (Where is the data located). This is a URL.
 EX: 
-string url = "";
-url = "https://xkcd.com/info.0.json";
+string url = "https://xkcd.com/info.0.json";
+HttpClientOptions options = new HttpClientOptions(url, authToken);
+HttpClient client = new HttpClient(options);
 
-4. Finally is the Method (What operation to perform on the data). 
-Typically you use the HttpResponseMessage to contain the response from the api,
-and you call a method from the api to initiate the operation. 
+2. Then you would choose and excecute a type of request. This also means setting 
+up the Response data type and knowing how to call whichever method
+you need from the api
+
 EX: 
 //First you open a gateway to the site in the form of a GET request
 //When you get a response you open a gateway to a site, wrapping the using
 //keyword around the operation ensures cleanup of the gateway
-using (HttpResponseMessage response = await API.ApiClient.GetAsync(url))
+using (HttpResponseMessage response = await client.Execute("get");)
 { 
     //a response can be a success or failure, prepare for both
     //For Success
+   3.Success or Failure prep
     if (response.IsSuccessStatusCode)
     {
         //Next you do whatever operation you want, in this case we read
         //and convert the json data into our custom built ComicModel class
         //where ReadAsAsync maps the json data to our Comic Model properties
+       4. Data Parsing
         ComicModel comic = await response.Content.ReadAsAsync<ComicModel>();
         
         return comic;

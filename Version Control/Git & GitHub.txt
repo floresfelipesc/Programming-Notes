@@ -30,15 +30,19 @@ Master - A clone of the origin repository that you store on your computer.
 Local Repository - Repository that you have stored on your computer LOCALLY.
 
 Commit - Logs a set of changes to files under a Title and description
+for the purposes of pushing to a repository
 
 Push - Transfer files or changes from your local repository to the repository 
-on Github
+on Github, you PUSH commits to online repositories.
 
 Pull - Copies updates from the repository on Github onto your local repository.
 
 Clone - Copies the repository on Github onto your local machine. 
 
 Branch - A separate copy of a repository where you can freely change
-without modifying the original. 
+without modifying main branch that is deployed.
 
-Merge - Applying the updates you made to a branch into the original repository
+Pull Request - Logs a set of changes to files under a title and description
+for the purposes of merging 2 branches together
+
+Merge - Applying the updates you made to a branch into another repository
