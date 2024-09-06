@@ -45,4 +45,4 @@ without modifying main branch that is deployed.
 Pull Request - Logs a set of changes to files under a title and description
 for the purposes of merging 2 branches together
 
-Merge - Applying the updates you made to a branch into another repository
+Merge - Applying the updates you made to a branch into another branch

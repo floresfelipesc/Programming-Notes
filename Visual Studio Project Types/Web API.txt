@@ -1,11 +1,14 @@
 WHAT IT IS: 
 A Web API (Application Programming Interface) allows communication between your application
-to other applications. Interface is the keyword here, is it a user interface 
+to other applications. 
+
+Interface is the keyword here, is it a user interface 
 (not a graphical user interface, a code interface) for your code to utilize other 
 applications within your application without having to know all the small intricacies of 
-the other applications. The interface
-API's dumb down their functions for simpler use for you. 
+the other applications. 
 
+The interface
+API's dumb down their functions for simpler use for you. 
 
 This is how you can interact with sites on the web from your local
 application. 
@@ -31,8 +34,6 @@ uniquely identifies you as YOU and gives you access to the desired API, then get
 
 
 BIG PICTURE:
-There is generally still a lot of overhead in understanding things, but it is well worth it. 
-
 Typically the big picture of using an API looks like this, the same goes for most if not
 all apps. This is called the Client - Server Architecture.  
 
@@ -47,15 +48,15 @@ simply importing a nuget package that contains libraries to take care of the
 the work for you. Sometimes it's as easy as getting a website link (Endpoint) into your
 project to get started. It varies.
 
-First you setup the API client settings (Which endpoint, authentication)
-You make a request using the API client, the request is sent to the server via the Internet,
-the server receives and performs whatever the request is, a response is sent from the
+First you setup the API client settings (Endpoint, Authentication).
+Then you make a Request using the API client, the Request is sent to the server via the Internet,
+the server receives and performs whatever the request is, a Response is sent from the
 server to the client, and then you take care of the data you received (XML/Json files). 
-This can be sending out data, modifying existing data, or deleting data. 
 
 The requests are typically passed through the internet using HTTP 
-requests (HyperText Transfer Protocol). 
-These should be very familiar to you as you make HTTP requests whenever you access a website!
+requests (HyperText Transfer Protocol) and can get read/write or do certain commands. 
+HTTP Requests should be  very familiar to you as you make HTTP requests whenever you access a 
+website! (the link)
 
 Whenever you make a request to a server, there will be a status code in response to your
 request to let you know how it went. Here are the different types of status codes: 
@@ -64,17 +65,12 @@ Within 200 Range - Success
 Within 400 Range - CLIENT ERROR (404 is the classic)
 Within 500 Range - SERVER ERROR
 
-A REST call consists of an endpoint, method, header
-ENDPOINT is the location where a piece of data resides and also contains 
-the logic of how to respond to requests from the client (often a URL).
-METHOD is what operation should be done on a piece of data (GET, POST, DELETE).
-HEADER defines the type of request, whether or not your data is formatted in XML or JSON.
-BODY contains your XML or JSON file. 
-REST basically just a set of rules for good practice, but do not need to be adhered to
-too strictly.
+You must also account for these different responses in your code. Your API request could fail!
+
 -----------------------------------------
-INVOICECLOUD TUTORIAL - 
-****The Need-to-know version is that you need the following: 
+
+DETAILED VERSION:
+
 ENDPOINT is the location where the server resides. It contains data and has 
 the logic of how to respond to requests from the client (often a URL).
 Depending on the Endpoint, it will also determine which data from the server
