@@ -1,0 +1,47 @@
+Git Configuration:
+
+git config --global user.name "FirstName LastName"
+git config --global user.email "work email here"
+
+Make notepad++ the default editor for git bash
+git config --global core.editor '"C:/Program Files/Notepad++/notepad++.exe"'
+
+last word is true if on windows, input if on mac
+git config --global core.autocrlf true
+
+Common Commands: 
+-h after any command to see more options of the command with -h
+git bash to a location
+git init - initializes a repo at the current location
+git status - checks the status of the current branch, what has changed etc
+git status -s left column symbolizes staging area, right column symbolizes the changes in
+the local repo
+git add - snapshots changes to later commit to the branch
+git rm - removes a file from branch and directory
+git commit - m "Useful message about commit here"
+git mv file1.txt renamed.txt - renames or moves the first file to the second file provided 
+git restore --staged file1.txt undo a staged change
+git restore hi.txt, undo local changes of a file
+git ls-files see all files in staging area
+git branch <branch name>
+git checkout <branch name> to swap branches
+git merge <branch name to merge with current branch>
+
+**note that changes do not belong to a particular branch until they are added and commited to
+the branch. so if you make a change and you swap, then that change will appear for 
+all branches.
+
+git log   views the commit history of the repo, space to turn the page, q to exit
+git log --oneline   views the commit history of the repo in a more compact form
+
+.gitignore files, you put in a list of file names that you do not want git to track the changes of
+
+git log   views the commit history of the repo, space to turn the page, q to exit
+git log --oneline   views the commit history of the repo in a more compact form
+
+Generic Commands
+mkdir folder - create a folder 
+echo hello > hi.txt - write text to a file and create the file
+echo hello >> hi.txt - append text to a file
+cd - navigate to path
+cd . navigate one level higher
