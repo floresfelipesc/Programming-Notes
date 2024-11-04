@@ -13,39 +13,26 @@ to the end.
 SO now keeping this in mind here's the low-down:
 -------------------------------------------------------------------------------------
   1. Define what data you are given, and what data you need to end up 
-with at the end. 
-This will give you your starting point and ending point before doing anything else.
+     with at the end. 
 
-  2. Reword the problem into as simple terms as possible, be stupid with it.
-Make sure you note what terms you do not understand so that you may search
-it up. Then reword the problem into laymans terms.
+  2. Read the problem and make sure you understand every single aspect of the
+     problem. Create questions for yourself on which parts you do not understand 
+     and then go one by one answering those questions.
+     Some answers may lead to more questions, create questions for those too
+     until there is no more ambiguity at all. A lot of WHAT questions should be expected.
 
-  3. Start breaking it down into a list of steps (1, 2, 3) to go from input to
-output, be stupid with it. What can help is looking at Gherkin Syntax for 
-the wording of breaking things down. Major keywords of Gherkin Syntax are Given xyz...
-When xyz... Then xyz... The keyword And can be used to elaborate on any particular statement.
+  3. Come up with a high level solution on how to theoretically solve the problem.
 
-You could take snippets from when you were rewording 
-the problem to create the steps as well if it is suitable.
+  4. Ask questions on HOW to go about each part of the high level solution.
 
- If neccessary create a simpler version of the current problem and try to solve that instead
- if the original problem is too much. This will give insight to solving the original problem.
+  5. Formulate the code/functions. AKA start coding.
 
-  4. Break the first list of steps into even stupider words if you can. (1a, 1b, 1c)
+  6. Label parts of your into UI and Business Logic respectively.
+     You should aim to have most of your code fall within into Business Logic
 
-  5. Underneath those list of steps, when you can't break them down into
-stupider words, then write out the coding steps if necessary. (No need to label
-but just space them out appropriately)
+  7. Start coding once you are finished. I like to make big steps of logic into functions.
 
-  6. Label big stupid steps into UI and Business Logic respectively.
 
-  7. Start coding once you are finished 
-
- 
-  8. Code the solution
-With the previous step done, this step should be trivial, as it is just coding all
-the common steps you have modeled. Use your knowledge of your programming language
-to put your plan into action. 
 
 The previous tactics should at least allow you to arrive at a brute force solution
 
@@ -71,7 +58,7 @@ solution as a base.
 
 -------------------------------------------------------------------------------------
 Addendum: Updated after my first internship and learning more of how to break
-down problems. 
+down problems in the real world
 
 
 
