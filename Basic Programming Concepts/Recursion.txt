@@ -1,0 +1,63 @@
+What is Recursion? 
+Recursion is the practice of using a function within itself.
+
+WHY
+Recursion is a way of doing a small piece of work to many different pieces of data.
+You can use it on any data structure. In essence, it completes the same task as Iteration does
+(for/while loops).
+The reason you would use Recursion is because often the code is shorter and more "elegant" 
+when in comparision to iteration. However Recursion does not scale up well, as using 
+recursion utilizes the stack, and when presented with a large enough of data it will cause 
+a stackoverflow.
+
+Still, recursion is useful for it's simple elegance in code, at the cost of being more 
+difficult to grasp conceptually do to its inception-like nature. It is also useful for 
+drafting up an initial solution as the code for recursion is often simpler. This initial 
+solution can later be transformed into iterative  for a more permanent and sturdy solution.
+
+HOW
+There are several parts of recursion that you need to consider
+1.The base case - this is what will determine the scope at which you will cover with your 
+recursion. 
+Your "range" if you will. Without this, you will be performing recursion infinitely.
+
+2. The small piece of work that is going to be done to each small piece of data
+When this step is executed is dependant on whether it is done before or after the recursion 
+step.
+
+3.The recursion step is what changes between the executions of the function within itself. 
+Something must always change or else you will be performing the recursion infinitely. You 
+must pay special attention to the parameters of the function as it will need to also pass 
+on data that changes as the recursion occurs. For example: for a loop to iterate through 
+an array of elements to verify the prescence of a specific element you need pass in: The 
+target element, the array itself, and the starting index from where you want to start your 
+search in.
+
+EX: Recursion Function to iterate through an array of integers 
+public static void Print(int i, int[] array){
+  //base case
+    if(i >= array.Length){
+      return;
+    }
+
+  //work on the way up
+    Console.WriteLine(array[i]);
+
+  //recursion step
+    Print(i + 1, array);
+
+  //work on the way down
+
+}
+Then elsewhere this function is used as
+Print(0, yourArrayHere);
+
+
+TIP: The work you do is either "on the way up" or "on the way down". The easy way 
+to see if it is one or the other is if the code is above or below the recursion step. Above 
+means"on the way up", below means "on the way down"
+
+When planning on using recursion, it is important to at the beginning not focus on the 
+smaller details. Focus on the small piece of repetitive work that is going to be executed 
+across many pieces of data. Then focus on the base case (the range that the work will execute
+upon), and finally how 

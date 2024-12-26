@@ -19,7 +19,7 @@ within an array chosen by the hash function. Then whenever you want the specific
 you feed the corresponding key to the hash function, and find the location of the data 
 to read from.
 
-Of course, this all requires a lot of maintainnce. Keys and Values can be tricky to
+Of course, this all requires a lot of maintaince. Keys and Values can be tricky to
 assign from real world information, as both can be whatever value. Keys and Hash
 Functions need special care, as both need to work together to produce distinct 
 locations when fed distinct keys. 
