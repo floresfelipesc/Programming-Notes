@@ -53,11 +53,14 @@ Then elsewhere this function is used as
 Print(0, yourArrayHere);
 
 
-TIP: The work you do is either "on the way up" or "on the way down". The easy way 
-to see if it is one or the other is if the code is above or below the recursion step. Above 
-means"on the way up", below means "on the way down"
+TIP: The work you want to do is either "on the way up" or "on the way down". The easy way to see
+if it is one or the other is if the code is above or below the recursion step. Above means
+"on the way up" work , below means "on the way down". On the same line means that the recursion itself
+is on the way up but the work done outside of that recursion function is on the way down.
 
-When planning on using recursion, it is important to at the beginning not focus on the 
-smaller details. Focus on the small piece of repetitive work that is going to be executed 
-across many pieces of data. Then focus on the base case (the range that the work will execute
-upon), and finally how 
+You can break down how to do recursion by thinking about what work do you want to do "on the way up" and what work
+to do when "on the way down"
+
+When planning on using recursion, it is important to at the beginning not focus on the smaller details.
+Focus on the small piece of repetitive work that is going to be executed across many pieces of data. 
+Then focus on the base case (the range that the work will execute upon).
