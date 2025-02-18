@@ -19,11 +19,14 @@ SO now keeping this in mind here's the low-down:
      problem. Create questions for yourself on which parts you do not understand 
      and then go one by one answering those questions.
      Some answers may lead to more questions, create questions for those too
-     until there is no more ambiguity at all. A lot of WHAT questions should be expected.
+     until there is no more ambiguity at all about the problem. 
+     A lot of WHAT questions should be expected.
 
   3. Come up with a high level solution on how to theoretically solve the problem.
 
   4. Ask questions on HOW to go about each part of the high level solution.
+     Keep asking HOW on every single part of your high level solution until there
+     is no more ambiguity at all about the solution.
 
   5. Formulate the code/functions. AKA start coding.
 
