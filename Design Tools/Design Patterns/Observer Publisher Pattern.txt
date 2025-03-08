@@ -1,0 +1,60 @@
+WHAT is the Observer Publisher Pattern?
+
+It is a pattern of where certain code is designated as observer and publisher.
+The goal of this pattern is to decouple logic from two separate groups 
+from each other but still maintain communication with each other. Where one
+keeps track of when a condition is met and sends out a signal (Publisher), 
+and the other contains and runs all the logic that will run in response to 
+the signal (Observer) with neither of them knowing about each other.
+
+**The signal sender is usually where the data relavent to the condition is
+located.
+
+**The signal receiver is usually where the data and behavior relavent to the
+response is located.
+
+-----------------------------------------------------------------------------------
+--Publisher has knowledge of the conditions that define an event, checking for when 
+it is run and to send out a signal for when the conditions of an event are met.
+
+--An event is a set of conditions defining an occurance within the program.
+
+EXAMPLE: 
+
+//FILE 1
+public static event Broadcast onPlayerDeath;  //event is exposed for
+//observers to refer to.
+
+public void PlayerDeathCheck(){
+  if(hp < 0){ // Condition that defines the event
+    onPlayerDeath?.Invoke(); //send out signal that the event is happening
+    
+  }
+
+}
+
+public void RemoveHealth(int amount){ // auxiliary function for the demonstration
+hp -= amount; 
+}
+
+----------------------------------------------------------------------------------
+--Observers observe when a publisher sends out a signal, and respond to it 
+by running some code the observer is in charge of.
+//FILE 2
+public void Constructor(){ //setting up the response
+  FILE1.onPlayerDeath += DisplayGameOverScreen; //function that will respond
+  //to the notification.
+}
+
+
+private void DisplayGameOverScreen(){
+  //display game over
+}
+
+
+
+
+
+
+
+
