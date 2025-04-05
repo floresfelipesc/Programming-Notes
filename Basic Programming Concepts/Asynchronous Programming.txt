@@ -1,37 +1,55 @@
 We know that programming is, for the most part, a list of instructions. 
 Typically in popular programming languages, your code gets excecuted line by line
 from top to bottom one at a time.
+What happens when there is an operation that we cannot predict how much time
+it will take and it is not dependant on your code? (Like API Requests
+that are I/O Bound)
+If it takes too long, your app will freeze because it will
+be doing that one function. That is where Asynch programming comes in.
 
 WHY TO USE: 
-When utilizing asynchronous programming we get to execute portions of code
-simultaneously in parallel, which allows for faster execution times and allows the
+When utilizing asynchronous programming we get to fire off the execution
+of a piece of code that takes a long time while we can execute other things.
+This is running pieces of code INDEPENDANTLY OF EACH OTHER, not CONCURRENTLY.
+An example to visualize would be a single chef managing a kitchen to make breakfast,
+always starting a long operation like preheating an oven and then moving to do 
+something else. These actions continue progressing independantly of each other, not
+only when one is finished.
+
+This allows for overall faster execution times and allows the
 user to still interact with the program as a task can "run in the background". 
 You do not want the user to the program "lock up" when they execute something,
-asynch prevents locking up from happening.
+asynch prevents locking up from happening as you can still read their inputs
+while something else is going on.
+
+
 
 HOW TO USE:
 The important keywords are await, async, and type Task.
 
-The async keyword makes it so that the section of code will run simultaneously
+The async keyword makes it so that the section of code will run independantly
 (they must return a variable of type Task when void or Task<int> when 
 you want to return a piece of data). All async methods must and will
 return TASKS. 
 
-Tasks represent aynchronous function calls. When "awaited" on, the code waits
-for the function to be done and returns the original data type of that function. 
+Tasks are used represent aynchronous function calls. The Task type represents
+an operation that might be in progress, cancelled, faulty, etc.
+ When "awaited" on, the code waits for the function to be done and returns the 
+original data type of that function. 
 
 The await keyword makes it so that the section of code that 
-is runnning simultaneously will WAIT until the specific line is all done and ready
+whatever code was fired off will WAIT until that specific line is all done and ready
 before continuining.
-The Task type is to store and queue all your parallel executions. 
 
-The async and await keyword are used in tamdem to run certain opertations in parallel
-to speed up execution while waiting for parallel execution to complete before 
-continuing.
+The async and await keyword are used in tamdem to run certain opertations 
+independantly to speed up execution by doing "something else" while a long operation
+is waiting to be finished before continuing.
 If you do not use await, then the asynchro code will "fire and forget"
 immediately and move onto the next part of the code without waiting. 
-This can cause unintended results, so always wait on the asynch code 
-to prevent this.
+Strategic use of awaits and not using awaits on certain parts of code is done
+to take advantage of things running independantly. 
+You will always want to await the asynch code AT SOME POINT to avoid 
+running code that depends on the long operations to finish.
 
 You can turn a piece of code into asynch by including the async keyword on the method
 signature plus wrapping the "big work" that needs to be done simultaneously with 
@@ -41,9 +59,32 @@ done at the same time.
 Or you include the async keyword on the method plus await an async version of the 
 existing method. 
 
-A good way to execute operations in parallel is to initialize several function executions
-in a for loop using Task.Run on each of them and adding them to a list.
-Then take the list and use Task.WhenAll to await for all of them to be finished. 
+A good way to execute operations in independantly is to initialize several function 
+executions in a for loop and adding them to a list.
+Then take the list and use Task.WhenAll to await for all of them to be finished.
+They will execute independantly, meaning whenever there is one that is taking
+a long time, you swap to another operation instead of just waiting.
+
+When you store a Async method in a variable it already gets run. You can then
+await on the stored variable itself to run things independantly.
+
+EX:
+//all operations run independantly of each other and take various times
+var cookEggTask = FryEggsAsync(2);
+var cookBaconTask = FryBaconAsync(3);
+var cookToastTask = MakeToast(2);
+
+var breakfastTasks = new List<Task>{cookEggTask, cookBaconTask, cookToastTask };
+
+while (breakfastTasks.Count > 0){
+  Task finishedTask = await Task.WhenAny(breakfastTasks);
+  await finishedTask;
+  breakfastTasks.Remove(finishedTask);
+
+
+} 
+
+
 
 NOTE:
 When you decide to make something asynchronous, it will propagate throughout all your
