@@ -19,33 +19,36 @@ subscribers.
 Action is used to declare subscribers who takes in parameters you define
 and output nothing.
 EX: 
-public event Action<double> myPublisher; //initialize
+public event Action<double> myPublisher; //initialize publisher
 myPublisher?.Invoke(someDouble); //fire off signal, not caring about subscribers
+//Broadcast a message and the condition to set off the message
 
 in another file...
 myPublisher += Method1; //the += operator is how you wire up a subscriber to publisher
-myPublisher += Method2;
+myPublisher += Method2; 
 ^
 |
 |
 public void Method1(double x){} //subscribers who do not know of the publisher
-public void Method2(double x){}
+public void Method2(double x){} //the logic itself that will run when recieving
+                                //broadcast
 
 
 Function can be used when you also want your subscribers to return a data type.
 This can be a bit weird though, as this is a one to many relationship, NOT a many
 to one relationship. Be wary when doing this. 
 
-public event Function<int, int> myFunction; //initialize
-int x = myFunction?.Invoke(5); //fire off signal, not caring about subscribers
+in File1...
+public event Function<int, int> myFunction; //initialize the publisher itself
+int x = myFunction?.Invoke(5); //publisher firing off signal, not caring about subscribers
 
-in another file...
-myFunction += Square; //the += operator is how you wire up a subscriber to publisher
-myFunction += Half;
+in File2...
+myFunction += Square; //this is where the subcribing happens
+myFunction += Half; //+= operator is how you wire up a subscriber to publisher
 ^
 |
 |
-public int Square(int x){} //subscribers who do not know of the publisher
+public int Square(int x){} //the logic that the subscribers will use
 public int Half(int x){}
 
 
