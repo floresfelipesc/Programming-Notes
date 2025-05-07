@@ -22,18 +22,30 @@ SO now keeping this in mind here's the low-down:
      until there is no more ambiguity at all about the problem. 
      A lot of WHAT questions should be expected.
 
-  3. Come up with a high level solution on how to theoretically solve the problem.
+  3. Create a new problem statement repeatedly with this new knowledge until there
+     is no ambiguity.  
 
-  4. Ask questions on HOW to go about each part of the high level solution.
+  4. Come up with a high level solution on how to theoretically solve the problem.
+
+  5. Ask questions on HOW to go about each part of the high level solution.
      Keep asking HOW on every single part of your high level solution until there
      is no more ambiguity at all about the solution.
 
-  5. Formulate the code/functions. AKA start coding.
+  6. Formulate the code/functions. AKA Start Coding. For this I recommend pretending
+     you have your business logic working and using those high level functions so that
+     you can use that as a reference for the high level functions that your Business
+     Logic will expose to the UI. The names for these high level functions can be taken
+     from the HOW section you have previously written.
+     You should aim to have most of your code fall within 
+     into Business Logic. 
 
-  6. Label parts of your into UI and Business Logic respectively.
-     You should aim to have most of your code fall within into Business Logic
+  7. Starting building your business logic based off of the high level functions you
+  pretended to have with private functions doing most of the work and functionality.
+  You put those functions together to build the high level function you use within the UI.
+  Expose as little as possible to the UI.
+     
 
-  7. Start coding once you are finished. I like to make big steps of logic into functions.
+  8. Have fun! No one way is correct, this is just the way I like to do things.
 
 
 
