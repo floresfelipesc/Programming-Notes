@@ -1,0 +1,45 @@
+The purpose of Software Architecture is general
+is to organize software in a way so that it can
+scale well, be maintained, tested, and so that 
+it would be easier for teams to stay organized to be
+able to collaborate. 
+
+In general you will find that most styles of
+Software Architecture split software into UI, Business
+Logic, and Data. 
+
+UI stand for User Interface, it is where the user
+can direcly interact and use an application without
+having to know all the details about the application
+itself. The user is most often a human who interacts
+with the UI but can be an application/client who 
+interacts with ANOTHER application. 
+*Displays data to the user
+*Reads input from user
+*A user of Business Logic
+*Shows mesages, errors, etc
+*Can be thought of as a Waiter in a restaurant
+
+Business Logic is the core functionality of
+an application. 
+*Does calculations with data
+*Validates user input
+*Contains logic
+*A user of Data
+*Can be thought of as a Chef in a restaurant
+
+Data is responsible for storing and retrieving
+data from a database when requested.
+*Getting Data
+*Storing Data
+*Can be thought of as a Refrigerator containing
+ingredients within a restaurant
+
+Splitting software into those 3 parts
+makes it easier to stay organized. Otherwise your
+code will be difficult to decipher which will make
+it difficult to change, understand, and test.
+
+All other styles are variations of the fundamental 
+principle of organizing code into UI, Business Logic,
+and Data.

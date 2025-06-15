@@ -1,0 +1,35 @@
+What is N Tier Architecture?
+N Tier Architecture is separation of code into layers, most
+often 3 distinct layers. UI Layer, Business Logic Layer, 
+and Data Layer.
+
+Typically used for general applications. Very versatile across
+many types of applications.
+Can turn to be tightly coupled if done improperly.
+
+Will be using console application project type
+as an example of how N Tier Architecture can be done.
+
+UI Layer:
+*Often Program.cs file
+*Displays to user and Reads input from user
+*Uses functions defined in Business Logic
+to get things done (is a user of Business Logic)
+
+Business Layer:
+*Often a Class Library with classes
+*Contains logic in a lot of functions
+*Uses functions defined in Data to
+retrieve data to use
+
+Data Layer:
+*Contains Data in variables and Models (custom made objects
+that have a bunch of variables)
+*Contains methods that exposes the data
+
+
+UI Layers --uses--> Business Logic --uses--> Data Layer
+
+EX:
+
+UI Layer
