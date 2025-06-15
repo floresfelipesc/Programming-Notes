@@ -16,7 +16,7 @@ with the UI but can be an application/client who
 interacts with ANOTHER application. 
 *Displays data to the user
 *Reads input from user
-*A user of Business Logic
+*A user of Business Logic (calls Business Logic)
 *Shows mesages, errors, etc
 *Can be thought of as a Waiter in a restaurant
 
@@ -25,7 +25,7 @@ an application.
 *Does calculations with data
 *Validates user input
 *Contains logic
-*A user of Data
+*A user of Data (calls Data)
 *Can be thought of as a Chef in a restaurant
 
 Data is responsible for storing and retrieving
