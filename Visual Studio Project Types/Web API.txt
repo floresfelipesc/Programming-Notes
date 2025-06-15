@@ -36,6 +36,9 @@ uniquely identifies you as YOU and gives you access to the desired API, then get
 BIG PICTURE:
 Typically the big picture of using an API looks like this, the same goes for most if not
 all apps. This is called the Client - Server Architecture.  
+Clients are software or computers that request data from another computer or software,
+known as the server. While they are both software/computers, you can distinguish who
+is who by the relationship of who is requesting the data and who is sending data.
 
 CLIENT <-----> Internet <------>    Server
 (you)           (HTTP)          (ex. Youtube)
@@ -49,9 +52,10 @@ the work for you. Sometimes it's as easy as getting a website link (Endpoint) in
 project to get started. It varies.
 
 First you setup the API client settings (Endpoint, Authentication).
-Then you make a Request using the API client, the Request is sent to the server via the Internet,
-the server receives and performs whatever the request is, a Response is sent from the
-server to the client, and then you take care of the data you received (XML/Json files). 
+Then you make a Request using the API client, the Request is sent to the server via the 
+Internet, the server receives and performs whatever the request is, a Response is sent 
+from the server to the client, and then you take care of the data you received 
+(XML/Json files). 
 
 The requests are typically passed through the internet using HTTP 
 requests (HyperText Transfer Protocol) and can get read/write or do certain commands. 

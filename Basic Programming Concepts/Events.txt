@@ -30,7 +30,7 @@ myPublisher += Method2;
 |
 |
 public void Method1(double x){} //subscribers who do not know of the publisher
-public void Method2(double x){} //the logic itself that will run when recieving
+public void Method2(double x){} //this the logic itself that will run when recieving
                                 //broadcast
 
 
