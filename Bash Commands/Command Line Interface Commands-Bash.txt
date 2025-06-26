@@ -1,0 +1,15 @@
+pwd (current directory)
+
+ls (list files in current directory)
+
+cd .. (go up one dir)
+cd [Desired directory] (navigate to directory)
+
+mkdir [foldername] (make a folder with a name)
+rm -r [foldername] (delete directory and all files underneath it)
+
+echo [text you want to display] (display text)
+echo [text you want to put in file] > filename.txt (create file with text already inside of it)
+
+cat [filename] (display contents of file)
+cat > [filename] (create a new file with nothing inside of it)
