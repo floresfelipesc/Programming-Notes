@@ -1,6 +1,38 @@
-The internet is what we call the network of all networks of computers all across the world.
+The internet is the network of networks, it is the network of all computers around the world.
+The internet is really just a collection of computers around the world that are communicating
+with each other. This can be considered a public network, other computers can see your
+packets sent/received, a third party entity can modify or read these to gain information
+about you if the data is not protected somehow.
+
+LAN or local area network is a network of computers connected by a switch. It is the safest
+as you are not exposed to any other computers within the network outside of the computers
+connected to the switch.
+A switch is a device that allows communications between computers using ethernet cables or
+LAN cables.
+
+A router is a device used to allows computers within a local area network to
+communicate with the bigger network that is the Internet. A LAN is typically connected
+to a switch and then connected to the router.An ISP or internet service
+providers are the ones who give us routers. 
+
+Each router has a routing table. A routing table uses algorithms that take in a multitude of
+factors like current traffic, distance, paths, etc to decide what path your data will take
+to get to its destination.
+
+Typical home routers nowadays combine the functionality of a switch and a router in one
+device where you can connect to the router directly using LAN cables.
+
+LAN Cables are widely used in everyday environments as they are cheap and easy to install.
+Fiber Optic Cables provide faster data transmission over longer distances, but require
+specialized installation and are far more expensive.
+
+A WAN or wide area network is a network of LANS. The biggest WAN is the Internet. 
+The most popular WANS are CANS (campus area networks) for things like the devices in
+a university campus. A WAN can be a semi-isolated part within the Internet, these are
+called VPN (Virtual Private Network) where through end to end encryption and hiding your
+IP Address is more secure than just being a part of the internet, but its not infallable.
+You can request a private WAN from an ISP to have a separate network away from the
+Internet for your own LANS but this is pricier than a VPN. 
 
 
-
-LAN or local area network 
 

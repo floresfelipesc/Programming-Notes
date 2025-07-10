@@ -1,0 +1,11 @@
+Each computer within a network has a unique address to identify itself within the network.
+This is called an IP Address (Internet Protocol Address).
+
+Whenever a computer wants to communicate with another computer, it creates a packet
+and sends that packet to the according computer.
+These packets contains to main parts:
+  Header: The IP Address of whoever the packet it for
+  Payload: The data itself whether it be files, webpage, or requests for data.
+
+These packets then travel from your computer, to the router, to whichever computer
+it needs to go.

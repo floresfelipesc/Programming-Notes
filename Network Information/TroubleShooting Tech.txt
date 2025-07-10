@@ -1,0 +1,14 @@
+Follow Organizational Policies: Ensure you adhere to your organization's procedures and policies before 
+starting any troubleshooting.
+
+Identify the Problem: Talk to the user to understand the issue and gather relevant information.
+
+Establish a Probable Cause: Based on the information, determine the most likely cause of the problem.
+
+Plan and Implement a Solution: Develop and execute a plan to resolve the issue.
+
+Verify Full Functionality: Confirm with the user that the problem is fully resolved.
+
+Implement Preventative Measures: Provide guidance to prevent the issue from recurring.
+
+Document the Process: Record the steps taken and lessons learned for future reference.
